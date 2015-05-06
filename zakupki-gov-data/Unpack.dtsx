@@ -1,0 +1,337 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/14/2015 12:38:57 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="POP-PC"
+  DTS:CreatorName="pop-pc\pop"
+  DTS:DTSID="{4BCA99DA-4D31-4ECE-B372-6A6E199820FD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Unpack"
+  DTS:PackageType="5"
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{F6C8FE31-37A8-47A9-BEB8-3D4857AA4318}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTP - госзакупки]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{D0333548-59DE-4868-B41F-F73A8FAB6EA7}"
+      DTS:ObjectName="FTP - госзакупки">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="ftp.zakupki.gov.ru:21">
+          <DTS:FtpConnection
+            DTS:ServerName="ftp.zakupki.gov.ru"
+            DTS:ServerUserName="free"
+            DTS:UsePassiveMode="True">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBzxkXfmOlxbnokPKrpcJl3QeRH8HEwa/fimyhaYLTpwAAAAAOgAAAAAIAACAAAAB/yTtD2DkkxWimmLrh98WdopN1zq2ZHeZTVsg6dmPDfhAAAAAgGr8k5wmjAcbwhhq8MSLlQAAAAB4iFHnu0mRb9+QitLhHt5VsVrvg4JiGvvmZCClWBj/DU8qjZL1Slds4mNoc31fpLTb0ofzxT54NGMnhVpzNgB4</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{63EB6D5F-A554-4E63-A0F1-12A1D490F5A3}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="contractError">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3C69F88B-F257-420D-8810-9DDC477F1B76}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="contractOutput">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D79C0870-D20C-44CE-8E37-023FFBC57E7C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="notificationError">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A3F11E66-F493-42DF-BC3C-95AC50BA94C7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="notificationOutput">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C68468C2-932C-47A1-9717-52F689065372}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="protocolError">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{491E353F-4536-4434-B97F-11CA93EDDC3C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="protocolOutput">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Загрузка с FTP"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="Загрузка документов с FTP-сервера"
+      DTS:Disabled="True"
+      DTS:DTSID="{53F0A580-273C-4816-AF56-2F61ADE1EEC6}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Загрузка с FTP"
+      DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2012; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{D0333548-59DE-4868-B41F-F73A8FAB6EA7}"
+          TaskOperationType="Receive"
+          TaskIsLocalPathVar="True"
+          TaskLocalPath="User::ZipFolder"
+          TaskRemotePath="/94fz/Tomskaja_obl/notifications/daily/notification_Tomskaja_obl_inc_2014*.zip"
+          TaskOverwriteDest="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Распаковка архивов извещений"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Распаковка скачанных архивов с xml "
+      DTS:DTSID="{470314D5-E586-4383-AF1E-E6B74D544EA3}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Распаковка архивов извещений"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="Unzipper.exe"
+          Arguments="f:\ObtainScrubData\ZipFiles\notification f:\ObtainScrubData\XmlFiles\notification"
+          WorkingDirectory="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\utilities"
+          StandardOutputVariable="User::notificationOutput"
+          StandardErrorVariable="User::notificationError"
+          WindowStyle="Minimized" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Распаковка архивов контрактов"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Распаковка скачанных архивов с xml "
+      DTS:DTSID="{e24a5117-6210-42a2-8835-ee58381a4ef3}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Распаковка архивов контрактов"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="Unzipper.exe"
+          Arguments="f:\ObtainScrubData\ZipFiles\contracts f:\ObtainScrubData\XmlFiles\contracts"
+          WorkingDirectory="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\utilities"
+          StandardOutputVariable="User::contractOutput"
+          StandardErrorVariable="User::contractError"
+          WindowStyle="Minimized" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Распаковка архивов протоколов"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Распаковка скачанных архивов с xml "
+      DTS:DTSID="{7bbc39e8-3101-4d95-87b4-863fbfe60df9}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Распаковка архивов протоколов"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="Unzipper.exe"
+          Arguments="f:\ObtainScrubData\ZipFiles\protocols f:\ObtainScrubData\XmlFiles\protocols"
+          WorkingDirectory="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\utilities"
+          StandardOutputVariable="User::protocolOutput"
+          StandardErrorVariable="User::protocolError"
+          WindowStyle="Minimized" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{C90D26E3-48FD-4295-BE42-2C7B2F79DF75}"
+      DTS:From="Package\Загрузка с FTP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Распаковка архивов извещений" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{39DC3941-C0CE-43CF-A747-30F622D0968D}"
+      DTS:From="Package\Загрузка с FTP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Распаковка архивов контрактов" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{5138E96C-0E3C-4324-B89D-343513B24CDA}"
+      DTS:From="Package\Загрузка с FTP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 2"
+      DTS:To="Package\Распаковка архивов протоколов" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="sql12">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Загрузка с FTP"
+          TopLeft="322,17.5" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Распаковка архивов извещений"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="381.75,59.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-258.75,48"
+              Start="0,0"
+              End="-258.75,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3651925820257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3651925820257"
+                    Point2="0,16.3651925820257"
+                    Point3="-4,16.3651925820257" />
+                  <mssgle:LineSegment
+                    End="-254.75,16.3651925820257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-254.75,16.3651925820257"
+                    Point2="-258.75,16.3651925820257"
+                    Point3="-258.75,20.3651925820257" />
+                  <mssgle:LineSegment
+                    End="-258.75,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Распаковка архивов контрактов"
+          TopLeft="322.5,105.5" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Распаковка архивов протоколов"
+          TopLeft="648.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="439,59.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="493.25,59.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="274.25,48"
+              Start="0,0"
+              End="274.25,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3651925820257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3651925820257"
+                    Point2="0,16.3651925820257"
+                    Point3="4,16.3651925820257" />
+                  <mssgle:LineSegment
+                    End="270.25,16.3651925820257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="270.25,16.3651925820257"
+                    Point2="274.25,16.3651925820257"
+                    Point3="274.25,20.3651925820257" />
+                  <mssgle:LineSegment
+                    End="274.25,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
