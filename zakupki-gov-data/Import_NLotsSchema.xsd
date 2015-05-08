@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:oos="http://zakupki.gov.ru/oos/types/1" xmlns:q="http://zakupki.gov.ru/oos/export/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="lot">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="19"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="id" type="xs:unsignedInt"/>
+              <xs:element minOccurs="0" name="ordinalNumber" type="xs:unsignedByte"/>
+              <xs:element minOccurs="0" name="subject">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="currency">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="priceNotSet" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="customerRequirements">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="customerRequirement">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="lotId" type="xs:long"/>
+                          <xs:element minOccurs="0" name="Id" type="xs:long"/>
+                          <xs:element minOccurs="0" name="quantity">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="4000"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="maxPrice" type="xs:double"/>
+                          <xs:element minOccurs="0" name="deliveryTerm">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="1024"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="guaranteeAppAmount" type="xs:double"/>
+                          <xs:element minOccurs="0" name="guaranteeContractAmount" type="xs:double"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="productsCount" type="xs:int"/>
+              <xs:element minOccurs="0" name="products">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="product">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="lotId" type="xs:long"/>
+                          <xs:element minOccurs="0" name="prodCode">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="20"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

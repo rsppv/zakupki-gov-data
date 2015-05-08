@@ -12,8 +12,8 @@
   DTS:MaxErrorCount="10"
   DTS:ObjectName="ImportNotification"
   DTS:PackageType="5"
-  DTS:VersionBuild="79"
-  DTS:VersionGUID="{90CEEA16-DB0B-4AE0-821F-79B387162475}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{32424799-3741-4E2E-8BF5-4E8115A0E417}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -184,7 +184,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Cancel Notifications"
           DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -210,7 +210,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="File processed ?"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -4778,7 +4778,7 @@ where [refTable].[notificationNumber] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Move file in processed folder"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -4798,7 +4798,7 @@ where [refTable].[notificationNumber] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Notification XSLT"
           DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -4824,7 +4824,7 @@ where [refTable].[notificationNumber] = ?</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Organizations from Notif XSLT"
           DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -4907,13 +4907,41 @@ where [refTable].[notificationNumber] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Notification XML File\Cancel Notifications"
+          TopLeft="527,158.5" />
+        <NodeLayout
           Size="154,42"
           Id="Package\Foreach Notification XML File\File processed ?"
           TopLeft="535.5,54.4999999999999" />
         <NodeLayout
+          Size="180,42"
+          Id="Package\Foreach Notification XML File\Load lots to database"
+          TopLeft="286.5,158.5" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Foreach Notification XML File\Load notifications to database"
+          TopLeft="5.5,158.5" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\Foreach Notification XML File\Load organizations to database"
+          TopLeft="758.5,158.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Notification XML File\Lots from Notif XSLT"
+          TopLeft="288.5,56.5" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Foreach Notification XML File\Move file in processed folder"
+          TopLeft="126,291" />
+        <NodeLayout
           Size="159,42"
           Id="Package\Foreach Notification XML File\Notification XSLT"
           TopLeft="36,56.5" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Foreach Notification XML File\Organizations from Notif XSLT"
+          TopLeft="761,56.4999999999999" />
         <EdgeLayout
           Id="Package\Foreach Notification XML File.PrecedenceConstraints[Ограничение]"
           TopLeft="115.5,98.5">
@@ -4936,14 +4964,6 @@ where [refTable].[notificationNumber] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42"
-          Id="Package\Foreach Notification XML File\Load notifications to database"
-          TopLeft="5.5,158.5" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach Notification XML File\Lots from Notif XSLT"
-          TopLeft="288.5,56.5" />
         <EdgeLayout
           Id="Package\Foreach Notification XML File.PrecedenceConstraints[Ограничение 1]"
           TopLeft="376.5,98.5">
@@ -4966,18 +4986,6 @@ where [refTable].[notificationNumber] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Foreach Notification XML File\Load lots to database"
-          TopLeft="286.5,158.5" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Foreach Notification XML File\Cancel Notifications"
-          TopLeft="527,158.5" />
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Foreach Notification XML File\Organizations from Notif XSLT"
-          TopLeft="761,56.4999999999999" />
         <EdgeLayout
           Id="Package\Foreach Notification XML File.PrecedenceConstraints[Ограничение 2]"
           TopLeft="871.5,98.4999999999999">
@@ -4992,48 +5000,6 @@ where [refTable].[notificationNumber] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="226,42"
-          Id="Package\Foreach Notification XML File\Load organizations to database"
-          TopLeft="758.5,158.5" />
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Foreach Notification XML File\Move file in processed folder"
-          TopLeft="126,291" />
-        <EdgeLayout
-          Id="Package\Foreach Notification XML File.PrecedenceConstraints[Ограничение 4]"
-          TopLeft="376.5,200.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-109.166666666667,90.5"
-              Start="0,0"
-              End="-109.166666666667,83">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.8970315398887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,49.8970315398887"
-                    Point2="0,53.8970315398887"
-                    Point3="-4,53.8970315398887" />
-                  <mssgle:LineSegment
-                    End="-105.166666666667,53.8970315398887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-105.166666666667,53.8970315398887"
-                    Point2="-109.166666666667,53.8970315398887"
-                    Point3="-109.166666666667,57.8970315398887" />
-                  <mssgle:LineSegment
-                    End="-109.166666666667,83" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5068,6 +5034,40 @@ where [refTable].[notificationNumber] = ?</property>
                     Point3="83.1666666666667,57.8970315398887" />
                   <mssgle:LineSegment
                     End="83.1666666666667,83" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Notification XML File.PrecedenceConstraints[Ограничение 4]"
+          TopLeft="376.5,200.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.166666666667,90.5"
+              Start="0,0"
+              End="-109.166666666667,83">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.8970315398887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.8970315398887"
+                    Point2="0,53.8970315398887"
+                    Point3="-4,53.8970315398887" />
+                  <mssgle:LineSegment
+                    End="-105.166666666667,53.8970315398887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.166666666667,53.8970315398887"
+                    Point2="-109.166666666667,53.8970315398887"
+                    Point3="-109.166666666667,57.8970315398887" />
+                  <mssgle:LineSegment
+                    End="-109.166666666667,83" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
