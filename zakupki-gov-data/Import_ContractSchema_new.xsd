@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="export">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="contractSign">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="id" type="xs:unsignedInt"/>
+							<xs:element minOccurs="0" name="number" type="xs:string"/>
+							<xs:element minOccurs="0" name="signDate" type="xs:date"/>
+							<xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong"/>
+							<xs:element minOccurs="0" name="foundationProtocolNumber" type="xs:string"/>
+							<xs:element minOccurs="0" name="customerRegNum" type="xs:unsignedLong"/>
+							<xs:element minOccurs="0" name="customerFullName" type="xs:string"/>
+							<xs:element minOccurs="0" name="protocolDate" type="xs:date"/>
+							<xs:element minOccurs="0" name="suppliersCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="suppliers">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element minOccurs="0" name="supplier">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="participantType" type="xs:string"/>
+													<xs:element minOccurs="0" name="inn" type="xs:unsignedLong"/>
+													<xs:element minOccurs="0" name="organizationName" type="xs:string"/>
+													<xs:element minOccurs="0" name="legalFormCode"/>
+													<xs:element minOccurs="0" name="legalFormName"/>
+													<xs:element minOccurs="0" name="status"/>
+													<xs:element minOccurs="0" name="countryCode" type="xs:unsignedShort"/>
+													<xs:element minOccurs="0" name="countryFullName" type="xs:string"/>
+													<xs:element minOccurs="0" name="factualAddress" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="contract">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="number" type="xs:string"/>
+							<xs:element minOccurs="0" name="signDate" type="xs:date"/>
+							<xs:element minOccurs="0" name="protocolDate" type="xs:date"/>
+							<xs:element minOccurs="0" name="price" type="xs:decimal"/>
+							<xs:element minOccurs="0" name="currency" type="xs:string"/>
+							<xs:element minOccurs="0" name="href"/>
+							<xs:element minOccurs="0" name="currentContractStage" type="xs:string"/>
+							<xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong"/>
+							<xs:element minOccurs="0" name="lotNumber" type="xs:int"/>
+							<xs:element minOccurs="0" name="placing" type="xs:int"/>
+							<xs:element minOccurs="0" name="customerRegNum" type="xs:unsignedInt"/>
+							<xs:element minOccurs="0" name="customerFullName" type="xs:string"/>
+							<xs:element minOccurs="0" name="singleCustomerReasonID"/>
+							<xs:element minOccurs="0" name="executionYear" type="xs:unsignedShort"/>
+							<xs:element minOccurs="0" name="executionMonth" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="financeSource" type="xs:string"/>
+							<xs:element minOccurs="0" name="extrabudgetCode" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="extrabudgetName" type="xs:string"/>
+							<xs:element minOccurs="0" name="extrabudgetaryMonth" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="extrabudgetaryYear" type="xs:unsignedShort"/>
+							<xs:element minOccurs="0" name="extrabudgetaryKOGSU"/>
+							<xs:element minOccurs="0" name="extrabudgetaryPrice" type="xs:decimal"/>
+							<xs:element minOccurs="0" name="suppliersCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="suppliers">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="supplier">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="participantType" type="xs:string"/>
+													<xs:element minOccurs="0" name="inn" type="xs:unsignedLong"/>
+													<xs:element minOccurs="0" name="organizationName" type="xs:string"/>
+													<xs:element minOccurs="0" name="legalFormCode" type="xs:string"/>
+													<xs:element minOccurs="0" name="legalFormName" type="xs:string"/>
+													<xs:element minOccurs="0" name="status"/>
+													<xs:element minOccurs="0" name="countryCode" type="xs:unsignedShort"/>
+													<xs:element minOccurs="0" name="countryFullName" type="xs:string"/>
+													<xs:element minOccurs="0" name="factualAddress" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="productsCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="products">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0" name="product">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="contractReqNum" type="xs:unsignedLong"/>
+													<xs:element minOccurs="0" name="OKPD" type="xs:unsignedInt"/>
+													<xs:element minOccurs="0" name="countryCode"/>
+													<xs:element minOccurs="0" name="countryFullName"/>
+													<xs:element minOccurs="0" name="name" type="xs:string"/>
+													<xs:element minOccurs="0" name="price" type="xs:decimal"/>
+													<xs:element minOccurs="0" name="quantity" type="xs:unsignedShort"/>
+													<xs:element minOccurs="0" name="OKEI" type="xs:unsignedShort"/>
+													<xs:element minOccurs="0" name="sum" type="xs:decimal"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="contractCancel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="regNum" type="xs:unsignedLong"/>
+							<xs:element minOccurs="0" name="cancelDate" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="currentContractStage" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="contractProcedure">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="id" type="xs:unsignedInt"/>
+							<xs:element minOccurs="0" name="regNum" type="xs:unsignedLong"/>
+							<xs:element minOccurs="0" name="publishDate" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="cancelDate" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="status" type="xs:string"/>
+							<xs:element minOccurs="0" name="currentContractStage" type="xs:string"/>
+							<xs:element minOccurs="0" name="terminationsCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="terminations">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element minOccurs="0" name="termination">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="contractProcedureID" type="xs:unsignedInt"/>
+													<xs:element minOccurs="0" name="paid" type="xs:decimal"/>
+													<xs:element minOccurs="0" name="terminationDate" type="xs:date"/>
+													<xs:element minOccurs="0" name="terminationReason" type="xs:unsignedInt"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="executionsCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="executionsStageYear" type="xs:string"/>
+							<xs:element minOccurs="0" name="executionsStageMonth" type="xs:string"/>
+							<xs:element minOccurs="0" name="executionsPaid" type="xs:decimal"/>
+							<xs:element minOccurs="0" name="executions">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element maxOccurs="unbounded" minOccurs="0" name="execution">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="contractProcedureID" type="xs:unsignedInt"/>
+													<xs:element minOccurs="0" name="paid" type="xs:decimal"/>
+													<xs:element minOccurs="0" name="executionDate"/>
+													<xs:element minOccurs="0" name="documentDate" type="xs:date"/>
+													<xs:element minOccurs="0" name="product" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="penaltiesCount" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="penalties">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element maxOccurs="unbounded" minOccurs="0" name="penalty">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="contractProcedureID" type="xs:unsignedInt"/>
+													<xs:element minOccurs="0" name="contractParty" type="xs:string"/>
+													<xs:element minOccurs="0" name="penaltyType" type="xs:string"/>
+													<xs:element minOccurs="0" name="accrualDecisionDate" type="xs:date"/>
+													<xs:element minOccurs="0" name="accrualAmount" type="xs:decimal"/>
+													<xs:element minOccurs="0" name="collectedAmount" type="xs:decimal"/>
+													<xs:element minOccurs="0" name="penaltyChangeType" type="xs:string"/>
+													<xs:element minOccurs="0" name="changeDecisionDate" type="xs:date"/>
+													<xs:element minOccurs="0" name="returnedAmount" type="xs:decimal"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

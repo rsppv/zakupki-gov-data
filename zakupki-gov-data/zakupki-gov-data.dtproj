@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">POP-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAABQfGWoy6DplVzrUGKRjvMdGtrl0pMaiKVMbTukCoXiAAAAAAAOgAAAAAIAACAAAADGUibr7oQWf1WbwC/ChEFgmNMZyM2+jdfXdYZ3Elas7pAAAAAXXhAlCEu8wr8VTieV1uDbeOPk8iiizhbSpSnvW49jk4xxdoEd7+nbJX+u8QcpxG8ixmtwviuLfJWO5P6L7ykfht4VkBM7gqx60c2FoOzqlqqPvsJsgX8VOCbHo89bwy0NboOT6xsU0dIO5zxZEt2wP17EN7oSf/BHoSOTDIVDz+BnQfrxz0SzS7u6qy3HEBhAAAAANKptZhWho21Z9tLjhhHLHYW57RYim6IYlcMuhn/iQXfjmghoQBByV1KNJdmyTd/pG8VUJ3WjgU7zyVsZT8h/vw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAACGhdzJMblKMYJNqhtYXh2MSZebFIYjIsNvy19HzF82ygAAAAAOgAAAAAIAACAAAABGMYWaIxZ2JrIxZBkWg07hPYKijIUk/djnyaDvuS0VIJAAAADknxO94wfAMXzxA0oi6ZFz1pePGhsTHqjKWH9LBg4uA6yC/zqSp/qhby75FR6bqBgPwnwK4DFYvfYyBxq2GSGRnt2QIXDk+8S0+zeZAnWQ++7iFkBq6PMJ08E8R2cRCgO8RkjW7uaihD+5DcdDXof0mbicf6et9xvZEO0zD2g96U+yma0KFBlwEJnnABQjOW5AAAAAehdrX6+JyCK/Oqx1evoiequAUyw+yWVFESIOIG+XvPKAyT0whNersH8bW6GrJbVjguPqzuqmw0hYKMLWnoF4wA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -514,10 +514,10 @@
                 <SSIS:Property SSIS:Name="Name">ImportContract_new</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">53</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">62</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2034AA40-CF7C-4D89-99AE-89AE423FEEC6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CF718CF9-F9FD-49ED-901B-D65E95D8EA4F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -692,6 +692,14 @@
     <ProjectItem>
       <Name>StylesForContracts.xsl</Name>
       <FullPath>StylesForContracts.xsl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Import_ContractSchema_new.xsd</Name>
+      <FullPath>Import_ContractSchema_new.xsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HelpScripts.sql</Name>
+      <FullPath>HelpScripts.sql</FullPath>
     </ProjectItem>
   </Miscellaneous>
   <Configurations>

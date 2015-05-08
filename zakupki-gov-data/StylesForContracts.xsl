@@ -9,8 +9,12 @@
 					<xsl:copy-of select="signDate"/>
 					<xsl:copy-of select="foundation/order/notificationNumber"/>
 					<xsl:copy-of select="foundation/order/foundationProtocolNumber"/>
-					<xsl:copy-of select="customer/regNum"/>
-					<xsl:copy-of select="customer/fullName"/>
+					<customerRegNum>
+						<xsl:value-of select="customer/regNum"/>
+					</customerRegNum>
+					<customerFullName>
+						<xsl:value-of select="customer/fullName"/>
+					</customerFullName>
 					<xsl:copy-of select="protocolDate"/>
 					<suppliersCount>
 						<xsl:value-of select="count(suppliers/supplier)"/>
@@ -44,14 +48,22 @@
 					<xsl:copy-of select="signDate"/>
 					<xsl:copy-of select="protocolDate"/>
 					<xsl:copy-of select="price"/>
-					<xsl:copy-of select="currency/code"/>
-					<xsl:copy-of select="href"/>
+					<currency>
+						<xsl:value-of select="currency/code"/>
+					</currency>
+					<href>
+						<xsl:value-of select="href"/>
+					</href>
 					<xsl:copy-of select="currentContractStage"/>
 					<xsl:copy-of select="foundation//notificationNumber"/>
 					<xsl:copy-of select="foundation//lotNumber"/>
 					<xsl:copy-of select="foundation//placing"/>
-					<xsl:copy-of select="customer/regNum"/>
-					<xsl:copy-of select="customer/fullName"/>
+					<customerRegNum>
+						<xsl:value-of select="customer/regNum"/>
+					</customerRegNum>
+					<customerFullName>
+						<xsl:value-of select="customer/fullName"/>
+					</customerFullName>
 					<singleCustomerReasonID>
 						<xsl:value-of select="singleCustomerReason/id"/>
 					</singleCustomerReasonID>
@@ -116,8 +128,12 @@
 								<OKPD>
 									<xsl:value-of select="OKDP/code"/>
 								</OKPD>
-								<xsl:copy-of select="country/countryCode"/>
-								<xsl:copy-of select="country/countryFullName"/>
+								<countryCode>
+									<xsl:value-of select="country/countryCode"/>
+								</countryCode>
+								<countryFullName>
+									<xsl:value-of select="country/countryFullName"/>
+								</countryFullName>
 								<xsl:copy-of select="name"/>
 								<xsl:copy-of select="price"/>
 								<xsl:copy-of select="quantity"/>
@@ -142,7 +158,9 @@
 					<xsl:copy-of select="id"/>
 					<xsl:copy-of select="regNum"/>
 					<xsl:copy-of select="publishDate"/>
-					<xsl:copy-of select="cancelDate"/>
+					<cancelDate>
+						<xsl:value-of select="cancelDate"/>
+					</cancelDate>
 					<xsl:copy-of select="status"/>
 					<xsl:copy-of select="currentContractStage"/>
 					<terminationsCount>
