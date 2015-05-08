@@ -160,8 +160,8 @@
 												<xs:sequence>
 													<xs:element minOccurs="0" name="contractProcedureID" type="xs:unsignedInt"/>
 													<xs:element minOccurs="0" name="paid" type="xs:decimal"/>
-													<xs:element minOccurs="0" name="executionDate"/>
-													<xs:element minOccurs="0" name="documentDate" type="xs:date"/>
+													<xs:element minOccurs="0" name="executionDate" type="xs:dateTime" />
+													<xs:element minOccurs="0" name="documentDate" type="xs:dateTime"/>
 													<xs:element minOccurs="0" name="product" type="xs:string"/>
 												</xs:sequence>
 											</xs:complexType>
