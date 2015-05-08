@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ImportContract_new"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{CF718CF9-F9FD-49ED-901B-D65E95D8EA4F}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{FFB6DF74-0D5B-4BB5-89F9-DAC88219608D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -299,6 +299,322 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract)"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Преобразование данных;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+                  description="Преобразование данных"
+                  name="Data Conv (suppliers - Contract)"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных]"
+                      name="Входные данные преобразования данных">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[participantType]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="participantType"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[participantType]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[inn]"
+                          cachedDataType="ui8"
+                          cachedName="inn"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[inn]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[organizationName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="organizationName"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[organizationName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[legalFormCode]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="legalFormCode"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[legalFormCode]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[legalFormName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="legalFormName"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[legalFormName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[status]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="status"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[status]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[countryCode]"
+                          cachedDataType="ui2"
+                          cachedName="countryCode"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[countryCode]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[countryFullName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="countryFullName"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[countryFullName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[factualAddress]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="factualAddress"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[factualAddress]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[suppliers_Id]"
+                          cachedDataType="ui8"
+                          cachedName="suppliers_Id"
+                          lineageId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[suppliers_Id]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных]"
+                      exclusionGroup="1"
+                      name="Выходные данные преобразования данных"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия participantType]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="2"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия participantType]"
+                          name="Копия participantType"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[participantType]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия inn]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия inn]"
+                          name="Копия inn"
+                          precision="12"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[inn]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия organizationName]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия organizationName]"
+                          name="Копия organizationName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[organizationName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="5"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormCode]"
+                          name="Копия legalFormCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[legalFormCode]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="2000"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormName]"
+                          name="Копия legalFormName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[legalFormName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="2"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия status]"
+                          name="Копия status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[status]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="3"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryCode]"
+                          name="Копия countryCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[countryCode]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryFullName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="200"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryFullName]"
+                          name="Копия countryFullName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[countryFullName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия factualAddress]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          length="1024"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия factualAddress]"
+                          name="Копия factualAddress"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[factualAddress]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия suppliers_Id]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия suppliers_Id]"
+                          name="Копия suppliers_Id"
+                          precision="20"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Указывает входной столбец, служащий источником данных для преобразования."
+                              name="SourceInputColumnLineageID">#{Package\Foreach File\Задача потока данных\Источник "XML".Outputs[export__contract__suppliers__supplier].Columns[suppliers_Id]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные ошибок преобразования данных]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Выходные данные ошибок преобразования данных"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - cSign)"
                   componentClassID="Microsoft.DataConvert"
@@ -629,13 +945,13 @@
                       description="Задает инструкцию SQL, которая формирует таблицу уточняющих запросов."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [ContractSignSuppliers]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[SuppliersContractSign]</property>
                     <property
                       dataType="System.String"
                       description="Задает инструкцию SQL, которая использует параметры для формирования таблицы уточняющих запросов."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [ContractSignSuppliers]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[SuppliersContractSign]) [refTable]
 where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -646,7 +962,7 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">2</property>
+                      typeConverter="CacheType">0</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -776,6 +1092,387 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Foreach File\Задача потока данных\Match missing rows 1"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Уточняющий запрос;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;6"
+                  description="Присоединяет дополнительные столбцы к потоку данных путем поиска значений в таблице. Пример: соединение со столбцом &quot;employee id&quot; таблицы employees позволяет получить значения &quot;hire date&quot; и &quot;employee name&quot;. Рекомендуется воспользоваться этим преобразованием, если таблица подстановки не помещается в памяти."
+                  name="Match missing rows 1"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Задает инструкцию SQL, которая формирует таблицу уточняющих запросов."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [SuppliersContract]</property>
+                    <property
+                      dataType="System.String"
+                      description="Задает инструкцию SQL, которая использует параметры для формирования таблицы уточняющих запросов."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [SuppliersContract]) [refTable]
+where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает тип соединения, используемого для доступа к эталонному набору данных."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает тип кэша таблицы уточняющих запросов."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает долю кэша (в процентах), выделенную для строк без совпадающих элементов в эталонном наборе данных."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Максимальный объем памяти для кэша ссылок на 32-разрядной платформе."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Максимальный объем памяти для кэша ссылок на 64-разрядной платформе."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Указывает, следует ли ссылаться на метаданные в формате XML."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="suppliers_Id" dataType="DT_NUMERIC" length="0" precision="20" scale="0" codePage="0"/&gt;&lt;referenceColumn name="participantType" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="inn" dataType="DT_NUMERIC" length="0" precision="12" scale="0" codePage="0"/&gt;&lt;referenceColumn name="organizationName" dataType="DT_NTEXT" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="legalFormCode" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="legalFormName" dataType="DT_WSTR" length="2000" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="status" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="countryCode" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="countryFullName" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="factualAddress" dataType="DT_WSTR" length="1024" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Задает список идентификаторов журнала обращений и преобразований, сопоставляемый с параметрами, которые использует инструкция SQL в свойстве SQLCommand. Элементы списка разделяются точками с запятой."
+                      name="ParameterMap">#{Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия inn]};#{Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия suppliers_Id]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                      name="DefaultCodePage">1251</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Определяет, должны ли повторяющиеся ключи в ссылочных данных обрабатываться как ошибки при использовании режима полного кэширования."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pop-pc.TestImport]"
+                      connectionManagerRefId="Package.ConnectionManagers[pop-pc.TestImport]"
+                      description="Диспетчер соединений, используемый для доступа к данным уточняющих запросов."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+                      name="Ввод преобразования &quot;Уточняющий запрос&quot;">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[Копия inn]"
+                          cachedDataType="numeric"
+                          cachedName="Копия inn"
+                          cachedPrecision="12"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия inn]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
+                              name="JoinToReferenceColumn">inn</property>
+                            <property
+                              dataType="System.Null"
+                              description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;].Columns[Копия suppliers_Id]"
+                          cachedDataType="numeric"
+                          cachedName="Копия suppliers_Id"
+                          cachedPrecision="20"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия suppliers_Id]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Указывает в ссылочной таблице столбец, который соединен с данным столбцом."
+                              name="JoinToReferenceColumn">suppliers_Id</property>
+                            <property
+                              dataType="System.Null"
+                              description="Указывает в ссылочной таблице столбец, из которого копируется данный столбец."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод совпадений преобразования &quot;Уточняющий запрос&quot;]"
+                      errorOrTruncationOperation="Уточняющий запрос"
+                      errorRowDisposition="RedirectRow"
+                      exclusionGroup="1"
+                      name="Вывод совпадений преобразования &quot;Уточняющий запрос&quot;"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Выход несовпадающих строк уточняющего запроса]"
+                      description="Вывод преобразования &quot;Уточняющий запрос&quot;, которое обрабатывает строки без совпадающих элементов в эталонном наборе данных. Используйте этот выход, если свойство NoMatchBehavior имеет значение &quot;Отправить строки без совпадающих элементов в выход несовпадающих строк&quot;."
+                      exclusionGroup="1"
+                      name="Выход несовпадающих строк уточняющего запроса"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach File\Задача потока данных\Suppliers (Contract)"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+                  description="Назначение &quot;OLE DB&quot;"
+                  name="Suppliers (Contract)"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                      name="OpenRowset">[dbo].[SuppliersContract]</property>
+                    <property
+                      dataType="System.String"
+                      description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Команда SQL для выполнения."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                      name="DefaultCodePage">1251</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает используемый режим доступа к базе данных."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[pop-pc.TestImport]"
+                      connectionManagerRefId="Package.ConnectionManagers[pop-pc.TestImport]"
+                      description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;]"
+                      errorOrTruncationOperation="Вставить"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Вход назначения &quot;OLE DB&quot;">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия suppliers_Id]"
+                          cachedDataType="numeric"
+                          cachedName="Копия suppliers_Id"
+                          cachedPrecision="20"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[suppliers_Id]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия suppliers_Id]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия participantType]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="Копия participantType"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[participantType]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия participantType]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия inn]"
+                          cachedDataType="numeric"
+                          cachedName="Копия inn"
+                          cachedPrecision="12"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[inn]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия inn]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия organizationName]"
+                          cachedDataType="nText"
+                          cachedName="Копия organizationName"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[organizationName]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия organizationName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия legalFormCode]"
+                          cachedDataType="wstr"
+                          cachedLength="5"
+                          cachedName="Копия legalFormCode"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[legalFormCode]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormCode]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия legalFormName]"
+                          cachedDataType="wstr"
+                          cachedLength="2000"
+                          cachedName="Копия legalFormName"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[legalFormName]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия legalFormName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия status]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="Копия status"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[status]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия status]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия countryCode]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Копия countryCode"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[countryCode]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryCode]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия countryFullName]"
+                          cachedDataType="wstr"
+                          cachedLength="200"
+                          cachedName="Копия countryFullName"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[countryFullName]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия countryFullName]" />
+                        <inputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Копия factualAddress]"
+                          cachedDataType="wstr"
+                          cachedLength="1024"
+                          cachedName="Копия factualAddress"
+                          externalMetadataColumnId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[factualAddress]"
+                          lineageId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных].Columns[Копия factualAddress]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[suppliers_Id]"
+                          dataType="numeric"
+                          name="suppliers_Id"
+                          precision="20" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[participantType]"
+                          dataType="wstr"
+                          length="2"
+                          name="participantType" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[inn]"
+                          dataType="numeric"
+                          name="inn"
+                          precision="12" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[organizationName]"
+                          dataType="nText"
+                          name="organizationName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[legalFormCode]"
+                          dataType="wstr"
+                          length="5"
+                          name="legalFormCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[legalFormName]"
+                          dataType="wstr"
+                          length="2000"
+                          name="legalFormName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[status]"
+                          dataType="wstr"
+                          length="2"
+                          name="status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[countryCode]"
+                          dataType="wstr"
+                          length="3"
+                          name="countryCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[countryFullName]"
+                          dataType="wstr"
+                          length="200"
+                          name="countryFullName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[factualAddress]"
+                          dataType="wstr"
+                          length="1024"
+                          name="factualAddress" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                      synchronousInputId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Foreach File\Задача потока данных\Suppliers (ContractSign)"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
@@ -791,7 +1488,7 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
                     <property
                       dataType="System.String"
                       description="Указывает имя объекта базы данных, используемого для открытия набора строк."
-                      name="OpenRowset">[dbo].[ContractSignSuppliers]</property>
+                      name="OpenRowset">[dbo].[SuppliersContractSign]</property>
                     <property
                       dataType="System.String"
                       description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
@@ -5139,15 +5836,30 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
                   name="export__contractSign__suppliers__supplier"
                   startId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contractSign__suppliers__supplier]" />
                 <path
+                  refId="Package\Foreach File\Задача потока данных.Paths[export__contract__suppliers__supplier]"
+                  endId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных]"
+                  name="export__contract__suppliers__supplier"
+                  startId="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier]" />
+                <path
                   refId="Package\Foreach File\Задача потока данных.Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
                   endId="Package\Foreach File\Задача потока данных\Suppliers (ContractSign).Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Задача потока данных\Match missing rows.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
+                  refId="Package\Foreach File\Задача потока данных.Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
+                  endId="Package\Foreach File\Задача потока данных\Suppliers (Contract).Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
+                  startId="Package\Foreach File\Задача потока данных\Match missing rows 1.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
+                <path
                   refId="Package\Foreach File\Задача потока данных.Paths[Выходные данные преобразования данных]"
                   endId="Package\Foreach File\Задача потока данных\Match missing rows.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - cSign).Outputs[Выходные данные преобразования данных]" />
+                <path
+                  refId="Package\Foreach File\Задача потока данных.Paths[Выходные данные преобразования данных1]"
+                  endId="Package\Foreach File\Задача потока данных\Match missing rows 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
+                  name="Выходные данные преобразования данных"
+                  startId="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract).Outputs[Выходные данные преобразования данных]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -5369,7 +6081,7 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
     design-time-name="Package\Foreach File\Задача потока данных">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="157,42"
           Id="Package\Foreach File\Задача потока данных\Источник &quot;XML&quot;"
@@ -5468,6 +6180,100 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Foreach File\Задача потока данных\Data Conv (suppliers - Contract)"
+          TopLeft="237,210" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Foreach File\Задача потока данных\Match missing rows 1"
+          TopLeft="259,293" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Foreach File\Задача потока данных\Suppliers (Contract)"
+          TopLeft="263,367" />
+        <EdgeLayout
+          Id="Package\Foreach File\Задача потока данных.Paths[export__contract__suppliers__supplier]"
+          TopLeft="401.666666666667,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-49.1666666666667,64"
+              Start="0,0"
+              End="-49.1666666666667,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.9873896595208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.9873896595208"
+                    Point2="0,25.9873896595208"
+                    Point3="-4,25.9873896595208" />
+                  <mssgle:LineSegment
+                    End="-45.1666666666667,25.9873896595208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-45.1666666666667,25.9873896595208"
+                    Point2="-49.1666666666667,25.9873896595208"
+                    Point3="-49.1666666666667,29.9873896595208" />
+                  <mssgle:LineSegment
+                    End="-49.1666666666667,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-110.501634114583,30.9873896595208,171.8366015625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Задача потока данных.Paths[Выходные данные преобразования данных1]"
+          TopLeft="351,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Задача потока данных.Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
+          TopLeft="349.5,335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,6.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -5482,7 +6288,7 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[ContractSignSuppliers]</Value>
+          type="q3:string">[dbo].[SuppliersContractSign]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5496,6 +6302,42 @@ where [refTable].[inn] = ? and [refTable].[suppliers_Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Задача потока данных\Suppliers (ContractSign)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Задача потока данных\Match missing rows 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Задача потока данных\Suppliers (Contract)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
