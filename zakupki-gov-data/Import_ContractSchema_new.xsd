@@ -42,6 +42,8 @@
 				<xs:element maxOccurs="unbounded" minOccurs="0" name="contract">
 					<xs:complexType>
 						<xs:sequence>
+              <xs:element minOccurs="0" name="id" type="xs:long"/>
+              <xs:element minOccurs="0" name="regNum" type="xs:string"/>
 							<xs:element minOccurs="0" name="number" type="xs:string"/>
 							<xs:element minOccurs="0" name="signDate" type="xs:date"/>
 							<xs:element minOccurs="0" name="protocolDate" type="xs:date"/>
@@ -99,7 +101,7 @@
 													<xs:element minOccurs="0" name="countryFullName"/>
 													<xs:element minOccurs="0" name="name" type="xs:string"/>
 													<xs:element minOccurs="0" name="price" type="xs:decimal"/>
-													<xs:element minOccurs="0" name="quantity" type="xs:unsignedShort"/>
+													<xs:element minOccurs="0" name="quantity" type="xs:double"/>
 													<xs:element minOccurs="0" name="OKEI" type="xs:unsignedShort"/>
 													<xs:element minOccurs="0" name="sum" type="xs:decimal"/>
 												</xs:sequence>

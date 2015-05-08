@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">POP-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAACGhdzJMblKMYJNqhtYXh2MSZebFIYjIsNvy19HzF82ygAAAAAOgAAAAAIAACAAAABGMYWaIxZ2JrIxZBkWg07hPYKijIUk/djnyaDvuS0VIJAAAADknxO94wfAMXzxA0oi6ZFz1pePGhsTHqjKWH9LBg4uA6yC/zqSp/qhby75FR6bqBgPwnwK4DFYvfYyBxq2GSGRnt2QIXDk+8S0+zeZAnWQ++7iFkBq6PMJ08E8R2cRCgO8RkjW7uaihD+5DcdDXof0mbicf6et9xvZEO0zD2g96U+yma0KFBlwEJnnABQjOW5AAAAAehdrX6+JyCK/Oqx1evoiequAUyw+yWVFESIOIG+XvPKAyT0whNersH8bW6GrJbVjguPqzuqmw0hYKMLWnoF4wA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAAAYl7Udo37J1RdIrzHMKwsf5s4Vk4Sb9T8LMuPkYJdsLwAAAAAOgAAAAAIAACAAAAAP6wjxMLh8WspuF3RV6DIQbL+QoUr4gTZhS7C9xxBi+JAAAAAAqOamVrguyZG7sONjkqHYds9s94GPgSahL/4DBDiUbASVKqbvh3eHUJ3BnKnAARIZ20EKb3InJddziD9GBZ45dQNlsTrsdmDEhnmsbbpD/sMbfyRkI16UDMjWdLPcN3pM0y8lOg3a28xzhbQD6aal+F4p7PQfKkEtZOHDEe3B2OJX1AQ/+z0OiKKbmikVouVAAAAA6QX4tiq8WDofjsmhX5BeTR+T8gKT4FiKZdXIAiNc5qtuyOpVL8KsnMu5CPSUeHs15UY0K/9Y2mgefpJo75QlSQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -514,10 +514,10 @@
                 <SSIS:Property SSIS:Name="Name">ImportContract_new</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">62</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">108</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CF718CF9-F9FD-49ED-901B-D65E95D8EA4F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{89687FCD-708B-4C10-A79F-1392E43E40CD}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -638,7 +638,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\pop\Downloads\Trash\schema1\StylesForContracts.xsl</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\StylesForContracts.xsl</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

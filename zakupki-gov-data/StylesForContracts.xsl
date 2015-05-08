@@ -44,6 +44,8 @@
 			</xsl:for-each>
 			<xsl:for-each select="contract">
 				<contract>
+          <xsl:copy-of select="regNum"/>
+          <xsl:copy-of select="id"/>
 					<xsl:copy-of select="number"/>
 					<xsl:copy-of select="signDate"/>
 					<xsl:copy-of select="protocolDate"/>
