@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ImportContract"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{29323A7D-2A53-40E0-B40E-01CABC6FF8D1}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{0F3D952A-F45D-406E-A5BB-D50D036981F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27982,149 +27982,149 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
                   startId="Package\Foreach File\Load Contracts to DB\Select missing rows 3.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
                   refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием14]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]"
-                  endId="Package\Foreach File\Load Contracts to DB\Преобразование данных.Inputs[Входные данные преобразования данных]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 10.Inputs[Правый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Merge 4.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9.Inputs[Правый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]"
-                  endId="Package\Foreach File\Load Contracts to DB\Sort.Inputs[Вход сортировки]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Merge 3.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]"
-                  endId="Package\Foreach File\Load Contracts to DB\Data conversation 2.Inputs[Входные данные преобразования данных]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 10.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]"
-                  endId="Package\Foreach File\Load Contracts to DB\Merge 2.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\customer and cSign.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]"
-                  endId="Package\Foreach File\Load Contracts to DB\Сортировка 5.Inputs[Вход сортировки]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Inputs[Левый вход соединения слиянием]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]"
-                  endId="Package\Foreach File\Load Contracts to DB\Data conversation 1.Inputs[Входные данные преобразования данных]"
-                  name="Выход соединения слиянием"
-                  startId="Package\Foreach File\Load Contracts to DB\Merge 2.Outputs[Выход соединения слиянием]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]"
                   endId="Package\Foreach File\Load Contracts to DB\Преобразование данных 1.Inputs[Входные данные преобразования данных]"
                   name="Выход соединения слиянием"
                   startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9.Outputs[Выход соединения слиянием]" />
                 <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]"
+                  endId="Package\Foreach File\Load Contracts to DB\Data conversation 1.Inputs[Входные данные преобразования данных]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Merge 2.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]"
+                  endId="Package\Foreach File\Load Contracts to DB\Сортировка 5.Inputs[Вход сортировки]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]"
+                  endId="Package\Foreach File\Load Contracts to DB\Merge 2.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\customer and cSign.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]"
+                  endId="Package\Foreach File\Load Contracts to DB\Data conversation 2.Inputs[Входные данные преобразования данных]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 10.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9.Inputs[Правый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 10.Inputs[Правый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Merge 4.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]"
+                  endId="Package\Foreach File\Load Contracts to DB\Преобразование данных.Inputs[Входные данные преобразования данных]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Inputs[Левый вход соединения слиянием]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Outputs[Выход соединения слиянием]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]"
+                  endId="Package\Foreach File\Load Contracts to DB\Sort.Inputs[Вход сортировки]"
+                  name="Выход соединения слиянием"
+                  startId="Package\Foreach File\Load Contracts to DB\Merge 3.Outputs[Выход соединения слиянием]" />
+                <path
                   refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки13]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Inputs[Правый вход соединения слиянием]"
                   name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\foundation.Outputs[Выход сортировки]" />
+                  startId="Package\Foreach File\Load Contracts to DB\fcsOrder.Outputs[Выход сортировки]" />
                 <path
                   refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки12]"
-                  endId="Package\Foreach File\Load Contracts to DB\Merge 2.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\Sort.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9.Inputs[Левый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 2.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Inputs[Левый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\Сортировка.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 1.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\oosOrder.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\singleCustomerReason.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\finance.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Inputs[Левый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\contract.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\execution.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 5.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Inputs[Правый вход соединения слиянием]"
-                  name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\currency.Outputs[Выход сортировки]" />
-                <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]"
                   endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5.Inputs[Правый вход соединения слиянием]"
                   name="Выход сортировки"
                   startId="Package\Foreach File\Load Contracts to DB\customer.Outputs[Выход сортировки]" />
                 <path
-                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]"
-                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1.Inputs[Правый вход соединения слиянием]"
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3.Inputs[Правый вход соединения слиянием]"
                   name="Выход сортировки"
-                  startId="Package\Foreach File\Load Contracts to DB\fcsOrder.Outputs[Выход сортировки]" />
+                  startId="Package\Foreach File\Load Contracts to DB\currency.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 5.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\execution.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 2.Inputs[Левый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\contract.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\finance.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\oosOrder.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 1.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8.Inputs[Левый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\Сортировка.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9.Inputs[Левый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\Сортировка 2.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]"
+                  endId="Package\Foreach File\Load Contracts to DB\Merge 2.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\Sort.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\foundation.Outputs[Выход сортировки]" />
+                <path
+                  refId="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]"
+                  endId="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4.Inputs[Правый вход соединения слиянием]"
+                  name="Выход сортировки"
+                  startId="Package\Foreach File\Load Contracts to DB\singleCustomerReason.Outputs[Выход сортировки]" />
                 <path
                   refId="Package\Foreach File\Load Contracts to DB.Paths[Выходные данные преобразования данных]"
                   endId="Package\Foreach File\Load Contracts to DB\Уточняющий запрос 1.Inputs[Ввод преобразования &quot;Уточняющий запрос&quot;]"
@@ -28548,7 +28548,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]"
           TopLeft="309,143.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28590,7 +28590,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Merge 2"
           TopLeft="10.5,184.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки12]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]"
           TopLeft="271.5,205">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28612,7 +28612,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]"
           TopLeft="96.5,145.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28646,7 +28646,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]"
           TopLeft="69,226.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28928,7 +28928,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 10"
           TopLeft="498,181" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]"
           TopLeft="690,143.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28998,7 +28998,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]"
           TopLeft="598.25,223">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29025,7 +29025,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="1076,555"
-          Size="1076,43"
+          Size="132,43"
           Id="b1439c5a-f524-4039-8c10-1c484b77c042"
           TopLeft="33.75,29">
           <GroupLayout.ChildrenIds>
@@ -29042,12 +29042,12 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <s:String>Package\Foreach File\Load Contracts to DB\Merge 3</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contractSign__foundation]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[order]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\customer and cSign</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Merge 2</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки12]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Merge 4</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contractSign__suppliers__supplier__country]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contractSign__suppliers__supplier]</s:String>
@@ -29062,9 +29062,9 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Вывод ошибок преобразования "Уточняющий запрос"]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Счетчик строк Выход 11]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 10</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contractSign__suppliers__supplier__legalForm]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -29156,7 +29156,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием"
           TopLeft="11.5,209.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]"
           TopLeft="66.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29190,7 +29190,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки13]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]"
           TopLeft="252.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29228,7 +29228,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 1"
           TopLeft="92,311.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]"
           TopLeft="105.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29302,7 +29302,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки13]"
           TopLeft="319.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29384,7 +29384,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Сортировка 5"
           TopLeft="118,413.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]"
           TopLeft="190.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29406,7 +29406,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]"
           TopLeft="189.75,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29472,7 +29472,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 3"
           TopLeft="122,617.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]"
           TopLeft="443.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29506,7 +29506,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием14]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]"
           TopLeft="220.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29580,7 +29580,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 4"
           TopLeft="248,719.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]"
           TopLeft="472.5,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29614,7 +29614,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]"
           TopLeft="220.5,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29692,7 +29692,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 5"
           TopLeft="308,821.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки12]"
           TopLeft="566.5,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29726,7 +29726,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]"
           TopLeft="346.5,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29804,7 +29804,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 6"
           TopLeft="436,923.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]"
           TopLeft="627.5,863.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29838,7 +29838,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]"
           TopLeft="406.5,863.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29916,7 +29916,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 7"
           TopLeft="652,1025.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]"
           TopLeft="750.5,965.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29950,7 +29950,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]"
           TopLeft="534.5,965.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29988,7 +29988,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\contract"
           TopLeft="324,413.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]"
           TopLeft="382.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30038,7 +30038,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\contracts"
           TopLeft="686,1420.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]"
           TopLeft="750.5,1067.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30212,7 +30212,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 8"
           TopLeft="884,209.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]"
           TopLeft="1080.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30246,7 +30246,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]"
           TopLeft="879.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30324,7 +30324,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Соединение слиянием 9"
           TopLeft="884,311.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]"
           TopLeft="1214.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30358,7 +30358,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]"
           TopLeft="982.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30400,7 +30400,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contracts to DB\Преобразование данных 1"
           TopLeft="878,413.5" />
         <EdgeLayout
-          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]"
+          Id="Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием14]"
           TopLeft="982.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30581,9 +30581,9 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Text="Parse Contracts"
           ParentId="Package\Foreach File\Load Contracts to DB"
           HeaderHeight="43"
-          IsExpanded="False"
+          IsExpanded="True"
           PanelSize="1541,1531"
-          Size="1541,43"
+          Size="1541,1574"
           Id="c3f675cc-9bd4-4d62-b3bd-609db21a77db"
           TopLeft="43,117">
           <GroupLayout.ChildrenIds>
@@ -30593,50 +30593,50 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <s:String>Package\Foreach File\Load Contracts to DB\foundation</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contract__foundation]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки13]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 1</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием2]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\fcsOrder</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[fcsOrder]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки13]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[contract]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 2</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\singleCustomerReason</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Сортировка 5</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\currency</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[currency]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 3</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки1]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием14]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[singleCustomerReason]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 4</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки6]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием12]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\customer</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contract__customer]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 5</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием9]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки12]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием5]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\execution</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contract__execution]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 6</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием11]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием3]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\finance</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[finances]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 7</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки5]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием8]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки7]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием6]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\contract</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки8]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Преобразование данных</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Уточняющий запрос 1</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Счетчик строк 1</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\contracts</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием13]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием1]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выходные данные преобразования данных]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Вывод ошибок преобразования "Уточняющий запрос"1]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Счетчик строк Выход 1]</s:String>
@@ -30645,16 +30645,16 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <s:String>Package\Foreach File\Load Contracts to DB\Сортировка 1</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contract__suppliers__supplier__country]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 8</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки9]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки10]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки4]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки3]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Сортировка 2</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[export__contract__suppliers__supplier__legalForm]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Соединение слиянием 9</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки11]</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием10]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход сортировки2]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием4]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Уточняющий запрос</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Преобразование данных 1</s:String>
-            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием7]</s:String>
+            <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выход соединения слиянием14]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Выходные данные преобразования данных4]</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB\Suppliers 1</s:String>
             <s:String>Package\Foreach File\Load Contracts to DB.Paths[Вывод ошибок преобразования "Уточняющий запрос"2]</s:String>
@@ -30669,6 +30669,45 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Contracts to DB\contracts">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Contracts to DB\ContractSigns">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Contracts to DB\ContractSigns - Suppliers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Contracts to DB\Уточняющий запрос 1">
     <Properties>
@@ -30693,33 +30732,30 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\contracts">
+    design-time-name="Package\Foreach File\Load Contracts to DB\Уточняющий запрос 2">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Contracts to DB\Suppliers 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\ContractSigns">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -30755,7 +30791,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\Уточняющий запрос 2">
+    design-time-name="Package\Foreach File\Load Contracts to DB\Select missing rows 2">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -30765,7 +30801,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[Suppliers]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -30814,25 +30850,15 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\Select missing rows 2">
+    design-time-name="Package\Foreach File\Load Contracts to DB\Suppliers">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Suppliers]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -30856,32 +30882,6 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\Suppliers">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contracts to DB\ContractSigns - Suppliers">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

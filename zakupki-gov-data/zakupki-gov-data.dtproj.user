@@ -4,18 +4,14 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <CreateDeploymentUtility>true</CreateDeploymentUtility>
+        <AllowConfigurationChanges>false</AllowConfigurationChanges>
         <Run64BitRuntime>true</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
         <ProgressReporting>true</ProgressReporting>
-        <ParameterConfigurationSensitiveValues>
-          <ConfigurationSetting>
-            <Id>LastModifiedTime</Id>
-            <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2015-04-14T16:27:05.5143998Z</Value>
-          </ConfigurationSetting>
-        </ParameterConfigurationSensitiveValues>
+        <ParameterConfigurationSensitiveValues />
       </Options>
     </Configuration>
   </Configurations>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ImportContract_new"
   DTS:PackageType="5"
-  DTS:VersionBuild="158"
-  DTS:VersionGUID="{1B38FFB6-5891-4696-82AF-BED7ABE042F5}">
+  DTS:VersionBuild="159"
+  DTS:VersionGUID="{866CD2AB-BBC7-40D4-9576-F169EC796303}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -225,7 +225,7 @@
             <FEFEProperty
               Folder="f:\ObtainScrubData\XmlFiles\contracts\" />
             <FEFEProperty
-              FileSpec="contract_A*.xml" />
+              FileSpec="contract*.xml" />
             <FEFEProperty
               FileNameRetrievalType="1" />
             <FEFEProperty
@@ -24893,8 +24893,8 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{505B5566-CED5-44B1-82F4-7C9EE6F6C2E3}"
-          DTS:ObjectName="{505B5566-CED5-44B1-82F4-7C9EE6F6C2E3}"
+          DTS:DTSID="{40651A92-5CC0-40AE-A806-E2BB6C623FF4}"
+          DTS:ObjectName="{40651A92-5CC0-40AE-A806-E2BB6C623FF4}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FileName" />
       </DTS:ForEachVariableMappings>

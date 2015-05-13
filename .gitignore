@@ -3,3 +3,5 @@ zakupki-gov-data/bin/
 zakupki-gov-data/obj/
 zakupki-gov-data/HelpScripts.sql
 HelpScripts.sql
+bin/
+obj/
