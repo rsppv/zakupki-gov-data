@@ -83,6 +83,36 @@
 					</status>
 				</supplier>
 			</xsl:for-each>
+			<xsl:for-each select="descendant::criterias//nsiEvalCriterion | descendant::criterias//childrenCriteria">
+				<criteria>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+					<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
+					<id>
+						<xsl:value-of select="id"/>
+					</id>
+					<parentId>
+						<xsl:if test="name() = 'childrenCriteria'">
+							<xsl:value-of select="parent::*/nsiEvalCriterion/id"/>
+						</xsl:if>
+					</parentId>
+					<name>
+						<xsl:value-of select="name"/>
+					</name>
+					<criterionValue>
+						<xsl:choose>
+							<xsl:when test="name()='childrenCriteria'">
+								<xsl:value-of select="criterionValue"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="following-sibling::criterionValue"/>
+							</xsl:otherwise>
+						</xsl:choose>
+					</criterionValue>
+					<order>
+						<xsl:value-of select="order"/>
+					</order>
+				</criteria>
+			</xsl:for-each>
 			<xsl:for-each select="protocolEF1//application">
 				<EFAppConsideration>
 					<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
@@ -96,6 +126,10 @@
 					<admissionResults>
 						<xsl:for-each select="admissionResults/admissionResult">
 							<admissionResult>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
 								<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
 								<memberId>
 									<xsl:value-of select="protocolCommissionMember/id"/>
@@ -107,14 +141,18 @@
 									<xsl:for-each select="appRejectedReason/nsiRejectReason">
 										<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
 										<appJournalNumber>
-											<xsl:value-of select="journalNumber"/>
+											<xsl:value-of select="ancestor::application/journalNumber"/>
 										</appJournalNumber>
-										<id>
+										<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+										<memberId>
+											<xsl:value-of select="preceding::protocolCommissionMember/id"/>
+										</memberId>
+										<reasonId>
 											<xsl:value-of select="id"/>
-										</id>
-										<reason>
+										</reasonId>
+										<reasonName>
 											<xsl:value-of select="reason"/>
-										</reason>
+										</reasonName>
 									</xsl:for-each>
 								</appRejectedReasons>
 							</admissionResult>
@@ -176,33 +214,226 @@
 					</admitted>
 					<appRating>
 						<xsl:value-of select="appRating"/>
-					</appRating>				
+					</appRating>
+					<appParticipants>
+						<xsl:for-each select="applicationParticipants/applicationParticipant">
+							<appParticipant>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
+								<inn>
+									<xsl:value-of select="inn"/>
+								</inn>
+								<organizationName>
+									<xsl:value-of select="organizationName"/>
+								</organizationName>
+							</appParticipant>
+						</xsl:for-each>
+					</appParticipants>
+					<admissionResults>
+						<xsl:for-each select="admissionResults/admissionResult">
+							<admissionResult>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
+								<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+								<memberId>
+									<xsl:value-of select="protocolCommissionMember/id"/>
+								</memberId>
+								<admitted>
+									<xsl:value-of select="admitted"/>
+								</admitted>
+								<appRejectedReasons>
+									<xsl:for-each select="appRejectedReason/nsiRejectReason">
+										<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+										<appJournalNumber>
+											<xsl:value-of select="ancestor::application/journalNumber"/>
+										</appJournalNumber>
+										<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+										<memberId>
+											<xsl:value-of select="preceding::protocolCommissionMember/id"/>
+										</memberId>
+										<reasonId>
+											<xsl:value-of select="id"/>
+										</reasonId>
+										<reasonName>
+											<xsl:value-of select="reason"/>
+										</reasonName>
+									</xsl:for-each>
+								</appRejectedReasons>
+							</admissionResult>
+						</xsl:for-each>
+					</admissionResults>				
 				</EFSummingUp>
-				appParticipants
-				admissionResults
 			</xsl:for-each>
-			<xsl:for-each select="OK1_apps">jNum
-				appFormat
-				appDate
-				price
-				increasePrice
-				requirementCompiances
-				appParticipants
-				contractConditions
+			<xsl:for-each select="protocolOK1//application">
+				<OKEnvelopesOpening>
+					<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+					<appJournalNumber>
+						<xsl:value-of select="journalNumber"/>
+					</appJournalNumber>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+					<price>
+						<xsl:value-of select="price"/>
+					</price>
+					<increasePrice>
+						<xsl:value-of select="increasePrice"/>
+					</increasePrice>
+					<requirementComplied>
+						<xsl:choose>
+							<xsl:when test="count(descendant::requirementCompliance[child::availabilityType[text()='U']]) > 0">0</xsl:when>
+							<xsl:otherwise>1</xsl:otherwise>
+						</xsl:choose>
+					</requirementComplied>
+					<criteriasNIR>
+						<xsl:value-of select="preceding::criterias/NIR"/>
+					</criteriasNIR>
+					<appParticipants>
+						<xsl:for-each select="applicationParticipants/applicationParticipant">
+							<appParticipant>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
+								<inn>
+									<xsl:value-of select="inn"/>
+								</inn>
+								<organizationName>
+									<xsl:value-of select="organizationName"/>
+								</organizationName>
+							</appParticipant>
+						</xsl:for-each>
+					</appParticipants>
+					<contractConditions>
+						<xsl:for-each select="contractConditions/contractCondition">
+							<contractCondition>
+								<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+								<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<id>
+									<xsl:value-of select="criterion/id"/>
+								</id>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
+								<condValue>
+									<xsl:if test="condValue">1</xsl:if>
+									<xsl:if test="not(condValue)">0</xsl:if>
+								</condValue>
+								<noOffer>
+									<xsl:value-of select="noOffer"/>
+								</noOffer>
+							</contractCondition>
+						</xsl:for-each>
+					</contractConditions>
+				</OKEnvelopesOpening>
 			</xsl:for-each>
-			<xsl:for-each select="OK2_apps">jNum
-				admitted
-				admissionResults
-				featuresCorrespondences
+			<xsl:for-each select="protocolOK2//application">
+				<OKAppConsideration>
+					<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+					<appJournalNumber>
+						<xsl:value-of select="journalNumber"/>
+					</appJournalNumber>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+					<admitted>
+						<xsl:value-of select="admitted"/>
+					</admitted>
+					<featuresComplied>
+						<xsl:choose>
+							<xsl:when test="count(descendant::featuresCorrespondence[child::compatible[text()='0']]) > 0">0</xsl:when>
+							<xsl:otherwise>1</xsl:otherwise>
+						</xsl:choose>
+					</featuresComplied>
+					<admissionResults>
+						<xsl:for-each select="admissionResults/admissionResult">
+							<admissionResult>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+								<appJournalNumber>
+									<xsl:value-of select="ancestor::application/journalNumber"/>
+								</appJournalNumber>
+								<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+								<memberId>
+									<xsl:value-of select="protocolCommissionMember/id"/>
+								</memberId>
+								<admitted>
+									<xsl:value-of select="admitted"/>
+								</admitted>
+								<appRejectedReasons>
+									<xsl:for-each select="appRejectedReason/nsiRejectReason">
+										<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+										<appJournalNumber>
+											<xsl:value-of select="ancestor::application/journalNumber"/>
+										</appJournalNumber>
+										<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+										<memberId>
+											<xsl:value-of select="preceding::protocolCommissionMember/id"/>
+										</memberId>
+										<reasonId>
+											<xsl:value-of select="id"/>
+										</reasonId>
+										<reasonName>
+											<xsl:value-of select="reason"/>
+										</reasonName>
+									</xsl:for-each>
+								</appRejectedReasons>
+							</admissionResult>
+						</xsl:for-each>
+					</admissionResults>
+				</OKAppConsideration>
 			</xsl:for-each>
-			<xsl:for-each select="OK3_apps">jNum
-				appRating
-				resultType
-				evalResult
-				generalPrefs
-				contractConditions
-				featuresCorrespondences
+			<xsl:for-each select="protocolOK3//application">
+				<OKEstimation>
+					<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+					<appJournalNumber>
+						<xsl:value-of select="journalNumber"/>
+					</appJournalNumber>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+					<appRating>
+						<xsl:value-of select="appRating"/>
+					</appRating>
+					<resultType>
+						<xsl:value-of select="resultType"/>
+					</resultType>
+					<evalResult>
+						<xsl:value-of select="evalResult"/>
+					</evalResult>
+					<generalPrefs>
+						<xsl:value-of select="generalPrefs"/>
+					</generalPrefs>
+					<featuresComplied>
+						<xsl:choose>
+							<xsl:when test="count(descendant::featuresCorrespondence[child::compatible[text()='0']]) > 0">0</xsl:when>
+							<xsl:otherwise>1</xsl:otherwise>
+						</xsl:choose>
+					</featuresComplied>
+					<xsl:for-each select="descendant::evaluationResult">
+						<contractConditionResult>
+							<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+							<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
+							<criterionId>
+								<xsl:value-of select="parent::*/preceding::criterion/id"/>
+							</criterionId>
+							<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+							<appJournalNumber>
+								<xsl:value-of select="ancestor::application/journalNumber"/>
+							</appJournalNumber>
+							<memberId>
+								<xsl:value-of select="protocolCommissionMember/id"/>
+							</memberId>
+							<evalResult>
+								<xsl:value-of select="evalResult"/>
+							</evalResult>
+						</contractConditionResult>
+					</xsl:for-each>
+				</OKEstimation>
 			</xsl:for-each>
+
+			<xsl:for-each select="ZK5"></xsl:for-each>
+			<xsl:for-each select="PO1"></xsl:for-each>
+			<xsl:for-each select="ZK1"></xsl:for-each>
+			
 		</root>
 	</xsl:template>
 </xsl:stylesheet>
