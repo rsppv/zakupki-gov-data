@@ -50,7 +50,7 @@
               <xs:element minOccurs="0" name="countryCode" type="xs:string" />
               <xs:element minOccurs="0" name="countryName" type="xs:string" />
               <xs:element minOccurs="0" name="factualAddress" type="xs:string" />
-              <xs:element minOccurs="0" name="status" ype="xs:string" />
+              <xs:element minOccurs="0" name="status" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

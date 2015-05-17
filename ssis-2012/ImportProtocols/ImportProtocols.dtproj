@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">POP-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAABiE+HrinmPnLA/oEXaTKnPV2E2oXdtkhcV11y163FyXQAAAAAOgAAAAAIAACAAAADPd6pDUKiFDuT/DtVvt53coRjAgY6SrlCt0dbAE9Nfo5AAAAAQKNNAJ33q7nl0KSbD5OviyabpXimt58J2i/MJVvInlBCjaMdWMiv4WTvtH8f8cK0OYlSOXZsHUninbbE3z08RPAFBu1x5b6qSlujrZGXEVmvYXnGc98z4541QmPWvc7pVnTYNxfNx8W0ECr8EEgBobftdRmS4JJHAoS3308YGCZMTOm69AVCwDRpXlio0NNlAAAAA4njy7wflhXKQYIoJkNasxRWqAU1ko5Ya+nD/OWHWmotsxT/UO6gXvSp5W8dC53zeOWpP2N3dqBl5rFIijHGHIA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnJVuk3pdEkKHS7uSJvtc2QAAAAACAAAAAAAQZgAAAAEAACAAAACaZwWLhEnsD2V/w4seLDRSdrUjTIjbEJRS2yLSFetKxAAAAAAOgAAAAAIAACAAAAC4yp556fdPyTaupe8g0PSg0P1uihHIrLFOtBzUbqls+ZAAAAD+6WuDIIyVfbwWm15WwKp9R3n7BR6FuWX4IfxAz4Ti3Y8mzhGGkm8PWdA37zL0qT0uNtkNx66hPfryQwU5LBZALCod9DSRCOyp7Hg8icODU5XpW0hfjiF/DGWkfF6MrIxHOoQAcQPzqdSK1qX06OlDgoOep6NSEpjtNDfXUryzCVW32Vj2ZoOvyYx0OZuNloFAAAAAx1kLURE5qohbAfv2fg97HbwHHNXEVBy1fNGOQGiCMWvw+DEo3TvTGYC1vjRYYUNGm/k78KyGffJxDXY80kk6VQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">ImportProtocols</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BFA2A6B9-BC8E-4B86-89CE-12066658C683}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{385263D4-A840-4B05-BE32-D3067E9A290F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -182,6 +182,21 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">C:\_protocols\processed</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StylesForProtocols_new.xsl.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\StylesForProtocols_new.xsl</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
