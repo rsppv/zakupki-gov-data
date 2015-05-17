@@ -1,0 +1,580 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/17/2015 10:30:56 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="POP-PC"
+  DTS:CreatorName="pop-pc\pop"
+  DTS:DTSID="{7B81DD4E-5989-4830-9CAA-C760ED702761}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="ImportProtocols"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{BFA2A6B9-BC8E-4B86-89CE-12066658C683}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[failed]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{81E08E39-932A-480E-97B1-CCD793E15637}"
+      DTS:ObjectName="failed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\_protocols\failed" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[log.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{94C900CD-C7EE-4B38-B547-5C030CE175F1}"
+      DTS:ObjectName="log.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\_protocols\log.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[pop-pc.TestImport]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DB83EE59-AB71-46D9-A8BD-1C52BBDFDB64}"
+      DTS:ObjectName="pop-pc.TestImport">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=pop-pc;Initial Catalog=TestImport;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[processed]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{0E3E125F-4210-4412-ACB3-579570BED549}"
+      DTS:ObjectName="processed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\_protocols\processed" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceXMLData]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8E4FFCFA-80AD-416B-9B6E-F7DFA04D0A1D}"
+      DTS:ObjectName="SourceXMLData">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceDirectoryPath] +  @[User::FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="c:\_protocols\test.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[StylesWithoutNamespaces.xsl]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{89241ADC-7BA1-4C7F-997F-3D6CF46D8EC7}"
+      DTS:ObjectName="StylesWithoutNamespaces.xsl">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\StylesWithoutNamespaces.xsl" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[_test.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2EA0C044-2E82-428B-AEAB-2E29FA71F577}"
+      DTS:ObjectName="_test.xml">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceDirectoryPath] + "temp\\_" +  @[User::FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="c:\_protocols\temp\_test.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A4D3D701-8629-48A3-98E1-59E3CA421BF5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">test.xml</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2AAAC9DA-6A9F-4113-95A0-A30227ABDA3E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="isProcessed">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1C0BD9E3-564A-485C-93B2-649883C14197}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceDirectoryPath">
+      <DTS:VariableValue
+        DTS:DataType="8">c:\_protocols\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E6750267-D176-4FAD-9096-7733793F01BE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TransformedXMLData">
+      <DTS:VariableValue
+        DTS:DataType="8">xml</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach File"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Контейнер &quot;Цикл по каждому элементу&quot;"
+      DTS:DTSID="{09BE7BDA-0E31-403F-B61D-85C72B489E85}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach File">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="DTS.ForEachFileEnumerator.3"
+        DTS:DTSID="{494CB207-7AED-4D8A-93A2-8D9DD4810D38}"
+        DTS:ObjectName="{494CB207-7AED-4D8A-93A2-8D9DD4810D38}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceDirectoryPath]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="c:\_protocols\" />
+            <FEFEProperty
+              FileSpec="test*.xml" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\Delete namespaces"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;XML&quot;"
+          DTS:DTSID="{7B0849D9-0CF0-4BD9-B914-38396B51B345}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Delete namespaces"
+          DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <XMLTaskData
+              OperationType="XSLT"
+              Source="SourceXMLData"
+              SecondOperandType="FileConnection"
+              SecondOperand="StylesWithoutNamespaces.xsl"
+              SaveOperationResult="True"
+              Destination="_test.xml"
+              OverwriteDestination="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\File Is Processed?"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Выполнение SQL&quot;"
+          DTS:DTSID="{F5578BD7-48AB-48F4-9F61-2B67E1C4DE69}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="File Is Processed?"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DB83EE59-AB71-46D9-A8BD-1C52BBDFDB64}"
+              SQLTask:SqlStatementSource="if exists (select * from ProcessedFiles where (FileName = ?))&#xA;select 1 as isProcessed&#xA;else&#xA;select 0 as isProcessed"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="isProcessed"
+                SQLTask:DtsVariableName="User::isProcessed" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::FileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\Load Protocols (DF)"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Задача потока данных"
+          DTS:Disabled="True"
+          DTS:DTSID="{839CD2D7-06A9-4B6C-A505-25161433D58E}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Protocols (DF)"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\Logging File"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Выполнение SQL&quot;"
+          DTS:Disabled="True"
+          DTS:DTSID="{567CEA09-675B-4485-9B4E-E2847F55003B}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Logging File"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{DB83EE59-AB71-46D9-A8BD-1C52BBDFDB64}"
+              SQLTask:SqlStatementSource="insert into ProcessedFiles&#xA;select ?, getdate()" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::FileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\Move file to failed folder"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Файловая система&quot;"
+          DTS:Disabled="True"
+          DTS:DTSID="{DBA2116F-892E-4EFA-A8D3-649DA35049DA}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Move file to failed folder"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="{8E4FFCFA-80AD-416B-9B6E-F7DFA04D0A1D}"
+              TaskDestinationPath="{81E08E39-932A-480E-97B1-CCD793E15637}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\Move file to processed folder"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Файловая система&quot;"
+          DTS:Disabled="True"
+          DTS:DTSID="{5C8D7F15-B2FA-46A7-85D3-08276E71C808}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Move file to processed folder"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="{8E4FFCFA-80AD-416B-9B6E-F7DFA04D0A1D}"
+              TaskDestinationPath="{0E3E125F-4210-4412-ACB3-579570BED549}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach File\XSL Transform Task"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;XML&quot;"
+          DTS:Disabled="True"
+          DTS:DTSID="{8013C7DB-B56B-43CF-993D-E7180F8CA8A6}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="XSL Transform Task"
+          DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData />
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение]"
+          DTS:CreationName=""
+          DTS:DTSID="{03FEF80C-CBB8-4C8E-A9C8-A3614A2CBFCD}"
+          DTS:From="Package\Foreach File\Logging File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение"
+          DTS:To="Package\Foreach File\Move file to processed folder" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{51BE458D-4356-4CC9-82E9-E113A71F1ADC}"
+          DTS:From="Package\Foreach File\Load Protocols (DF)"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 1"
+          DTS:To="Package\Foreach File\Logging File" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{AA8F1AA8-89A8-480D-A19D-1531FE5E824D}"
+          DTS:From="Package\Foreach File\Load Protocols (DF)"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 2"
+          DTS:To="Package\Foreach File\Move file to failed folder"
+          DTS:Value="1" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{549456BC-FBA6-48F7-9D62-5B738C86AADB}"
+          DTS:From="Package\Foreach File\Delete namespaces"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 3"
+          DTS:To="Package\Foreach File\XSL Transform Task" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{2BA794D0-32C4-44CD-9109-925812DDB2D6}"
+          DTS:From="Package\Foreach File\XSL Transform Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 4"
+          DTS:To="Package\Foreach File\Load Protocols (DF)" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{94789ABE-1571-41E2-AFD7-5CEB3A0959E4}"
+          DTS:From="Package\Foreach File\File Is Processed?"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 5"
+          DTS:To="Package\Foreach File\Delete namespaces" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{E3F718EE-9042-4E76-918B-8421C8F62445}"
+          DTS:ObjectName="{E3F718EE-9042-4E76-918B-8421C8F62445}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="sql11">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Foreach File\Delete namespaces"
+          TopLeft="245,107.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach File\File Is Processed?"
+          TopLeft="248.5,5.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Foreach File\Logging File"
+          TopLeft="53.5,413.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Move file to failed folder"
+          TopLeft="233.5,413.5" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Foreach File\Move file to processed folder"
+          TopLeft="9.50000000000006,513.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Foreach File\XSL Transform Task"
+          TopLeft="243.5,209.5" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Foreach File\Load Protocols (DF)"
+          TopLeft="241,310.5" />
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение]"
+          TopLeft="119.25,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="299.666666666667,352.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178.166666666667,61"
+              Start="0,0"
+              End="-178.166666666667,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7373271889401" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7373271889401"
+                    Point2="0,24.7373271889401"
+                    Point3="-4,24.7373271889401" />
+                  <mssgle:LineSegment
+                    End="-174.166666666667,24.7373271889401" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174.166666666667,24.7373271889401"
+                    Point2="-178.166666666667,24.7373271889401"
+                    Point3="-178.166666666667,28.7373271889401" />
+                  <mssgle:LineSegment
+                    End="-178.166666666667,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="354.333333333333,352.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.3333333333333,61"
+              Start="0,0"
+              End="-24.3333333333333,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7373271889401" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7373271889401"
+                    Point2="0,24.7373271889401"
+                    Point3="-4,24.7373271889401" />
+                  <mssgle:LineSegment
+                    End="-20.3333333333333,24.7373271889401" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.3333333333333,24.7373271889401"
+                    Point2="-24.3333333333333,24.7373271889401"
+                    Point3="-24.3333333333333,28.7373271889401" />
+                  <mssgle:LineSegment
+                    End="-24.3333333333333,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.9608854166667,29.7373271889401,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 3]"
+          TopLeft="330,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 4]"
+          TopLeft="328.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 5]"
+          TopLeft="330,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="432,613"
+          Size="432,656"
+          Id="Package\Foreach File"
+          TopLeft="450,291" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
