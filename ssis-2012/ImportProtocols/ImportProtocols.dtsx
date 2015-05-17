@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ImportProtocols"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{BFA2A6B9-BC8E-4B86-89CE-12066658C683}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{5D9D19CD-EFAA-453F-A8E9-A0031E661005}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -353,6 +353,8 @@
           DTS:refId="Package\Foreach File.PrecedenceConstraints[Ограничение 5]"
           DTS:CreationName=""
           DTS:DTSID="{94789ABE-1571-41E2-AFD7-5CEB3A0959E4}"
+          DTS:EvalOp="3"
+          DTS:Expression="@isProcessed == false"
           DTS:From="Package\Foreach File\File Is Processed?"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Ограничение 5"
@@ -563,7 +565,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout

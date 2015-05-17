@@ -2,7 +2,7 @@
 	<xsl:output indent="yes" method="xml"/>
 	<xsl:template match="/export">
 		<root>
-			<xsl:for-each select="child::*[name() != 'protocolCancel' | name() != 'protocolEvasion']">
+			<xsl:for-each select="child::*[not(name() = 'protocolCancel' or name() = 'protocolEvasion')]">
 				<protocol>
 					<xsl:copy-of select="self::*//notificationNumber"/>
 					<xsl:copy-of select="self::*//protocolNumber"/>
@@ -37,7 +37,7 @@
 					</present>
 				</commissionMember>
 			</xsl:for-each>
-			<xsl:for-each select="descendant::applications/application">
+			<xsl:for-each select="descendant::applications/application[not(ancestor::protocolCancel or ancestor::protocolEvasion)]">
 				<application>
 					<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
 					<journanalNumber>
@@ -316,9 +316,9 @@
 								<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
 								<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
 								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
-								<id>
+								<criterionId>
 									<xsl:value-of select="criterion/id"/>
-								</id>
+								</criterionId>
 								<appJournalNumber>
 									<xsl:value-of select="ancestor::application/journalNumber"/>
 								</appJournalNumber>
@@ -327,7 +327,8 @@
 									<xsl:if test="not(condValue)">0</xsl:if>
 								</condValue>
 								<noOffer>
-									<xsl:value-of select="noOffer"/>
+									<xsl:if test="noOffer"><xsl:value-of select="noOffer"/></xsl:if>
+									<xsl:if test="not(noOffer)">0</xsl:if>
 								</noOffer>
 							</contractCondition>
 						</xsl:for-each>
@@ -414,12 +415,13 @@
 							<xsl:otherwise>1</xsl:otherwise>
 						</xsl:choose>
 					</featuresComplied>
+					<contractConditionResults>
 					<xsl:for-each select="descendant::evaluationResult">
 						<contractConditionResult>
 							<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
 							<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
 							<criterionId>
-								<xsl:value-of select="parent::*/preceding::criterion/id"/>
+								<xsl:value-of select="parent::*/preceding-sibling::criterion/id"/>
 							</criterionId>
 							<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
 							<appJournalNumber>
@@ -433,6 +435,7 @@
 							</evalResult>
 						</contractConditionResult>
 					</xsl:for-each>
+					</contractConditionResults>
 				</OKEstimation>
 			</xsl:for-each>
 
@@ -506,6 +509,7 @@
 					<appJournalNumber>
 						<xsl:value-of select="journalNumber"/>
 					</appJournalNumber>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
 					<admitted>
 						<xsl:value-of select="admitted"/>
 					</admitted>
@@ -551,6 +555,7 @@
 					<appJournalNumber>
 						<xsl:value-of select="journalNumber"/>
 					</appJournalNumber>
+					<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
 					<admitted>
 						<xsl:value-of select="admitted"/>
 					</admitted>
@@ -600,34 +605,89 @@
 			</xsl:for-each>
 
 			<xsl:for-each select="protocolZK5">
-				<orderName>
-					<xsl:value-of select="orderName"/>
-				</orderName>
-				<placerOrgType>
-					<xsl:value-of select="order/placerOrgType"/>
-				</placerOrgType>
-				<placerRegNum>
-					<xsl:value-of select="order/placer/regNum"/>
-				</placerRegNum>
-				<placerFullName>
-					<xsl:value-of select="order/placer/fullName"/>
-				</placerFullName>
-				<protocolLots>
-					
-				</protocolLots>
-				<products>
-					<xsl:for-each select="descendant::product">
-						<product>
-							<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
-		                 	<lotId><xsl:value-of select="ancestor::protocolLot/lotNumber"/></lotId>
-			                <prodCode><xsl:value-of select="code"/></prodCode>
-			                <prodName>
-			                	<xsl:value-of select="name"/>
-			                </prodName>
-			            </product> 
-					</xsl:for-each>
-				</products>
+				<order>
+                    <xsl:copy-of select="notificationNumber"/>
+					<xsl:copy-of select="protocolNumber"/>
+					<orderName>
+						<xsl:value-of select="orderName"/>
+					</orderName>
+					<placerOrgType>
+						<xsl:value-of select="order/placerOrgType"/>
+					</placerOrgType>
+					<placerRegNum>
+						<xsl:value-of select="order/placer/regNum"/>
+					</placerRegNum>
+					<placerFullName>
+						<xsl:value-of select="order/placer/fullName"/>
+					</placerFullName>
+					<products>
+						<xsl:for-each select="descendant::product">
+							<product>
+								<xsl:copy-of select="ancestor::*[child::notificationNumber]/notificationNumber"/>
+			                 	<lotId><xsl:value-of select="ancestor::protocolLot/lotNumber"/></lotId>
+			                 	<xsl:copy-of select="ancestor::*[child::protocolNumber]/protocolNumber"/>
+				                <prodCode><xsl:value-of select="code"/></prodCode>
+				                <prodName>
+				                	<xsl:value-of select="name"/>
+				                </prodName>
+				            </product> 
+						</xsl:for-each>
+					</products>
+				</order>
 			</xsl:for-each>
+			
+			<xsl:for-each select="protocolCancel">
+				<protocolCancel>
+					<xsl:copy-of select="notificationNumber"/>
+					<xsl:copy-of select="protocolNumber"/>
+					<publishDate><xsl:value-of select="publishDate"/></publishDate>
+					<href><xsl:value-of select="href"/></href>
+					<protocolLots>
+						<xsl:for-each select="self::*/protocolLots/protocolLot">
+							<protocolLot>
+								<xsl:copy-of select="ancestor::protocolCancel/protocolNumber"/>
+								<xsl:copy-of select="ancestor::protocolCancel/notificationNumber"/>
+								<xsl:copy-of select="lotNumber"/>
+							</protocolLot>
+						</xsl:for-each>
+					</protocolLots>
+				</protocolCancel>
+			</xsl:for-each>
+
+			<xsl:for-each select="protocolEvasion">
+				<protocolEvasion>
+					<xsl:copy-of select="notificationNumber"/>
+					<xsl:copy-of select="protocolNumber"/>
+					<xsl:copy-of select="protocolDate"/>
+					<xsl:copy-of select="signDate"/>
+					<publishDate><xsl:value-of select="publishDate"/></publishDate>
+					<href><xsl:value-of select="href"/></href>
+					<applications>
+						<xsl:for-each select="descendant::application">
+							<application>
+								<xsl:copy-of select="ancestor::protocolEvasion/protocolNumber"/>
+								<xsl:copy-of select="ancestor::protocolEvasion/notificationNumber"/>
+								<xsl:copy-of select="ancestor::protocolLot/lotNumber"/>
+								<xsl:copy-of select="journalNumber"/>
+							</application>
+						</xsl:for-each>
+					</applications>
+					<refusalFoundations>
+						<xsl:for-each select="descendant::refusalFact">
+							<refusalFoundation>
+								<xsl:copy-of select="ancestor::protocolEvasion/protocolNumber"/>
+								<foundationId>
+									<xsl:value-of select="foundation/id"/>
+								</foundationId>
+								<foundationName>
+									<xsl:value-of select="foundation/name"/>
+								</foundationName>
+							</refusalFoundation>
+						</xsl:for-each>
+					</refusalFoundations>
+				</protocolEvasion>
+			</xsl:for-each>
+
 		</root>
 	</xsl:template>
 </xsl:stylesheet>
