@@ -64,7 +64,7 @@
 						<xsl:value-of select="organizationForm"/>
 					</organizationForm>
 					<legalForm>
-						<xsl:value-of select="okopfType"/>
+						<xsl:value-of select="legalForm/code"/>
 					</legalForm>
 					<organizationName>
 						<xsl:value-of select="organizationName"/>

@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="protocol">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="foundationProtocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="signDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="href" type="xs:string" />
+              <xs:element minOccurs="0" name="commissionRegNumber" type="xs:int" />
+              <xs:element minOccurs="0" name="protocolType" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="commissionMember">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="role" type="xs:long" />
+              <xs:element minOccurs="0" name="present" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="application">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="journanalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+              <xs:element minOccurs="0" name="appFormat" type="xs:string" />
+              <xs:element minOccurs="0" name="appDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="supplier">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="participantType" type="xs:string" />
+              <xs:element minOccurs="0" name="inn" type="xs:string" />
+              <xs:element minOccurs="0" name="organizationForm" type="xs:string" />
+              <xs:element minOccurs="0" name="legalForm" type="xs:string" />
+              <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+              <xs:element minOccurs="0" name="countryCode" type="xs:string" />
+              <xs:element minOccurs="0" name="countryName" type="xs:string" />
+              <xs:element minOccurs="0" name="factualAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="status" ype="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="criteria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+              <xs:element minOccurs="0" name="id" type="xs:long" />
+              <xs:element minOccurs="0" name="parentId" type="xs:long" />
+              <xs:element minOccurs="0" name="name" type="xs:string" />
+              <xs:element minOccurs="0" name="criterionValue" type="xs:double" />
+              <xs:element minOccurs="0" name="order" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="EFAppConsideration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="admissionResults">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element minOccurs="0" name="admissionResult">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                          <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="appRejectedReasons" >
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element minOccurs="0" name="appRejectedReason">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                                      <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="EFAuctionHolding">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="lastPrice" type="xs:double" />
+              <xs:element minOccurs="0" name="dateLastPrice" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="increaseInitialPrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="participantPresent" type="xs:boolean" />
+              <xs:element minOccurs="0" name="priceOffers" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="priceOffer">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element name="appJournalNumber" type="xs:string" />
+                          <xs:element name="bid" type="xs:double" />
+                          <xs:element name="date" type="xs:dateTime" />
+                          <xs:element name="increaseInitialPrice" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="EFSummingUp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="appRating" type="xs:short" />
+              <xs:element minOccurs="0" name="appParticipants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="appParticipant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="inn" type="xs:string" />
+                          <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="admissionResults">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="admissionResult">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                          <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="appRejectedReasons" >
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element minOccurs="0" name="appRejectedReason">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                                      <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="OKEnvelopesOpening">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="price" type="xs:double" />
+              <xs:element minOccurs="0" name="increasePrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="requirementComplied" type="xs:boolean" />
+              <xs:element minOccurs="0" name="criteriasNIR" type="xs:string" />
+              <xs:element minOccurs="0" name="appParticipants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="appParticipant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="inn" type="xs:string" />
+                          <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="contractConditions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="contractCondition">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="criterionId" type="xs:long" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="condValue" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="noOffer" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="OKAppConsideration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="featuresComplied" type="xs:boolean" />
+              <xs:element minOccurs="0" name="admissionResults">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="admissionResult">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                          <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="appRejectedReasons" >
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element minOccurs="0" name="appRejectedReason">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                                      <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                                      <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                                      <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="OKEstimation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="appRating" type="xs:short" />
+              <xs:element minOccurs="0" name="resultType" type="xs:string" />
+              <xs:element minOccurs="0" name="evalResult" type="xs:double" />
+              <xs:element minOccurs="0" name="generalPrefs" type="xs:byte" />
+              <xs:element minOccurs="0" name="featuresComplied" type="xs:boolean" />
+              <xs:element minOccurs="0" name="contractConditionResults">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="contractConditionResult">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+                          <xs:element minOccurs="0" name="criterionId" type="xs:long" />
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="memberId" type="xs:long" />
+                          <xs:element minOccurs="0" name="evalResult" type="xs:double" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="ZKAppConsideration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="price" type="xs:double" />
+              <xs:element minOccurs="0" name="increasePrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="appRating" type="xs:short" />
+              <xs:element minOccurs="0" name="resultType" type="xs:string" />
+              <xs:element minOccurs="0" name="appParticipants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="appParticipant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="inn" type="xs:string" />
+                          <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="appRejectedReasons">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element minOccurs="0" name="appRejectedReason">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                          <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="featuresComplied" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="POAppConsideration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="appParticipants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="appParticipant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="inn" type="xs:string" />
+                          <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="appRejectedReasons">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element minOccurs="0" name="appRejectedReason">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                          <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="ZK5AppConsideration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="admitted" type="xs:boolean" />
+              <xs:element minOccurs="0" name="appRating" type="xs:short" />
+              <xs:element minOccurs="0" name="resultType" type="xs:string" />
+              <xs:element minOccurs="0" name="price" type="xs:double" />
+              <xs:element minOccurs="0" name="appParticipants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="appParticipant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="inn" type="xs:string" />
+                          <xs:element minOccurs="0" name="organizationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="appRejectedReasons">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element minOccurs="0" name="appRejectedReason">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="appJournalNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="reasonId" type="xs:long" />
+                          <xs:element minOccurs="0" name="reasonName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="order">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="orderName" type="xs:string" />
+              <xs:element minOccurs="0" name="placerOrgType" type="xs:string" />
+              <xs:element minOccurs="0" name="placerRegNum" type="xs:string" />
+              <xs:element minOccurs="0" name="placerFullName" type="xs:string" />
+              <xs:element minOccurs="0" name="products">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="product">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="lotId" type="xs:int" />
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="prodCode" type="xs:string" />
+                          <xs:element minOccurs="0" name="prodName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="protocolCancel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="publishDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="href" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolLots">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="protocolLot">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="protocolEvasion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+              <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="protocolDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="signDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="publishDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="href" type="xs:string" />
+              <xs:element minOccurs="0" name="applications">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="application">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="notificationNumber" type="xs:unsignedLong" />
+                          <xs:element minOccurs="0" name="lotNumber" type="xs:int" />
+                          <xs:element minOccurs="0" name="journalNumber" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="refusalFoundations">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="refusalFoundation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="protocolNumber" type="xs:string" />
+                          <xs:element minOccurs="0" name="foundationId" type="xs:long" />
+                          <xs:element minOccurs="0" name="foundationName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
