@@ -12,8 +12,8 @@
   DTS:MaxErrorCount="50"
   DTS:ObjectName="ImportProtocols"
   DTS:PackageType="5"
-  DTS:VersionBuild="82"
-  DTS:VersionGUID="{C209FE63-08AA-46E0-9AD7-54A2990528F4}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{EC87D8B4-0E6D-4858-8137-F842C8BD7835}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21830,7 +21830,7 @@ where [refTable].[participantType] = ? and [refTable].[inn] = ?</property>
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -22381,7 +22381,7 @@ where [refTable].[criterionId] = ? and [refTable].[protocolNumber] = ? and [refT
                     <property
                       dataType="System.String"
                       description="Указывает, следует ли ссылаться на метаданные в формате XML."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="protocolNumber" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="notificationNumber" dataType="DT_NUMERIC" length="0" precision="19" scale="0" codePage="0"/&gt;&lt;referenceColumn name="appJournalNumber" dataType="DT_NUMERIC" length="0" precision="20" scale="0" codePage="0"/&gt;&lt;referenceColumn name="lotNumber" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="criterionId" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="condValue" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="noOffer" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="protocolNumber" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="notificationNumber" dataType="DT_NUMERIC" length="0" precision="19" scale="0" codePage="0"/&gt;&lt;referenceColumn name="appJournalNumber" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="lotNumber" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="criterionId" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="condValue" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="noOffer" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -22746,7 +22746,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -22767,7 +22767,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                     <property
                       dataType="System.String"
                       description="Указывает, следует ли ссылаться на метаданные в формате XML."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="notificationNumber" dataType="DT_NUMERIC" length="0" precision="19" scale="0" codePage="0"/&gt;&lt;referenceColumn name="appJournalNumber" dataType="DT_NUMERIC" length="0" precision="20" scale="0" codePage="0"/&gt;&lt;referenceColumn name="protocolNumber" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="admitted" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="featuresComplied" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="notificationNumber" dataType="DT_NUMERIC" length="0" precision="19" scale="0" codePage="0"/&gt;&lt;referenceColumn name="appJournalNumber" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="protocolNumber" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="admitted" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="featuresComplied" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -23661,7 +23661,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -23838,7 +23838,7 @@ where [refTable].[lotNumber] = ? and [refTable].[appDate] = ? and [refTable].[no
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -24224,7 +24224,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -25234,7 +25234,7 @@ where [refTable].[protocolNumber] = ? and [refTable].[notificationNumber] = ? an
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">2</property>
+                      typeConverter="CacheType">0</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -25570,7 +25570,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[protocolNumber] = ?</p
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -26066,7 +26066,7 @@ where [refTable].[memberId] = ? and [refTable].[notificationNumber] = ? and [ref
                       dataType="System.Int32"
                       description="Указывает тип кэша таблицы уточняющих запросов."
                       name="CacheType"
-                      typeConverter="CacheType">0</property>
+                      typeConverter="CacheType">1</property>
                     <property
                       dataType="System.Int32"
                       description="Указывает, как преобразование &quot;Уточняющий запрос&quot; обрабатывает строки без совпадающих элементов в эталонном наборе данных."
@@ -27036,17 +27036,17 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;2]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;4]"
                   endId="Package\Foreach File\Load Protocols (DF)\ProtocolEvasionDetails.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;5]"
                   endId="Package\Foreach File\Load Protocols (DF)\EFSummingUp.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;6]"
                   endId="Package\Foreach File\Load Protocols (DF)\ProtocolEvasionReasons.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
@@ -27056,17 +27056,17 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;6]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
                   endId="Package\Foreach File\Load Protocols (DF)\ZK5AppConsideration.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;5]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
                   endId="Package\Foreach File\Load Protocols (DF)\OKEnvelopesOpening.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;4]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;2]"
                   endId="Package\Foreach File\Load Protocols (DF)\EFSummingUpDetails.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 10.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
@@ -27076,7 +27076,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;10]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;12]"
                   endId="Package\Foreach File\Load Protocols (DF)\PPAppConsideration.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
@@ -27086,42 +27086,42 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;12]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;10]"
                   endId="Package\Foreach File\Load Protocols (DF)\ZK5Products.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;9]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;7]"
                   endId="Package\Foreach File\Load Protocols (DF)\AppRejectedReasons.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;7]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;8]"
                   endId="Package\Foreach File\Load Protocols (DF)\ContractConditions.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;8]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;9]"
                   endId="Package\Foreach File\Load Protocols (DF)\ProtocolCancelDetails.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Вывод ошибок преобразования &quot;Уточняющий запрос&quot;"
                   startId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25.Outputs[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца3]"
                   endId="Package\Foreach File\Load Protocols (DF)\EFAucHolding.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Выход производного столбца"
                   startId="Package\Foreach File\Load Protocols (DF)\Производный столбец.Outputs[Выход производного столбца]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца5]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца4]"
                   endId="Package\Foreach File\Load Protocols (DF)\ProtocolCancels.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Выход производного столбца"
                   startId="Package\Foreach File\Load Protocols (DF)\Производный столбец 5.Outputs[Выход производного столбца]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца4]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца5]"
                   endId="Package\Foreach File\Load Protocols (DF)\Protocols.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Выход производного столбца"
                   startId="Package\Foreach File\Load Protocols (DF)\Производный столбец 4.Outputs[Выход производного столбца]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца3]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца]"
                   endId="Package\Foreach File\Load Protocols (DF)\Applications.Inputs[Вход назначения &quot;OLE DB&quot;]"
                   name="Выход производного столбца"
                   startId="Package\Foreach File\Load Protocols (DF)\Производный столбец 3.Outputs[Выход производного столбца]" />
@@ -27136,147 +27136,147 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
                   name="Выход производного столбца"
                   startId="Package\Foreach File\Load Protocols (DF)\Производный столбец 2.Outputs[Выход производного столбца]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных8]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных19]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 16.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 16.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных7]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных20]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 15.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных6]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных21]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 11.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных9]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных18]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 1.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 1.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных28]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных15]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 12.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных11]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных16]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 21.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных10]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных17]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 14.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных1]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных26]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 17.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 17.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных27]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 18.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных17]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных28]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 8.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 8.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных2]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных25]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 19.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных5]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных22]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 6.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных4]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных23]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 10.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 10.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных3]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных24]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных27]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных14]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 5.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 5.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных12]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных4]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 20.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 20.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных18]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных5]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 27.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных19]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных6]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 22.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 22.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных16]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных3]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 26.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 26.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных13]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 4.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 4.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных14]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных1]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 9.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных15]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных2]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 23.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных24]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных11]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 7.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 7.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных25]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных12]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 3.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 3.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных26]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных13]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 28.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных23]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных10]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 2.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 2.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных20]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных7]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 25.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных21]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных8]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 24.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 24.Outputs[Выходные данные преобразования данных]" />
                 <path
-                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных22]"
+                  refId="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных9]"
                   endId="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13.Inputs[Вход преобразования &quot;Уточняющий запрос&quot;]"
                   name="Выходные данные преобразования данных"
                   startId="Package\Foreach File\Load Protocols (DF)\Преобразование данных 13.Outputs[Выходные данные преобразования данных]" />
@@ -27293,7 +27293,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
           DTS:LocaleID="-1"
           DTS:ObjectName="Logging File"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -27319,7 +27319,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
           DTS:LocaleID="-1"
           DTS:ObjectName="Move file to failed folder"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -27339,7 +27339,7 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
           DTS:LocaleID="-1"
           DTS:ObjectName="Move file to processed folder"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
@@ -27395,35 +27395,14 @@ where [refTable].[notificationNumber] = ? and [refTable].[appJournalNumber] = ? 
               Language="CSharp"
               ReadOnlyVariables="User::FileName">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_b4cb7041d81a4eb898008e07c91fb1e4")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_b4cb7041d81a4eb898008e07c91fb1e4")]
-[assembly: AssemblyCopyright("Copyright @  2015")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -27792,14 +27771,35 @@ namespace ST_b4cb7041d81a4eb898008e07c91fb1e4.Properties {
     }
 }]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_b4cb7041d81a4eb898008e07c91fb1e4")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_b4cb7041d81a4eb898008e07c91fb1e4")]
+[assembly: AssemblyCopyright("Copyright @  2015")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -28281,6 +28281,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 18"
           TopLeft="5496,134" />
         <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15"
+          TopLeft="5264.25,220" />
+        <NodeLayout
           Size="192,42"
           Id="Package\Foreach File\Load Protocols (DF)\ProtocolEvasionReasons"
           TopLeft="30,286" />
@@ -28288,10 +28292,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 16"
           TopLeft="1284.25,127.5" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21"
-          TopLeft="6005,217" />
         <NodeLayout
           Size="209,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 3"
@@ -28302,28 +28302,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="4276,297" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28"
-          TopLeft="27,207" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18"
+          TopLeft="5506,219" />
         <NodeLayout
           Size="130,42"
           Id="Package\Foreach File\Load Protocols (DF)\Union All 1"
           TopLeft="1591,129" />
         <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 2"
+          TopLeft="538,289" />
+        <NodeLayout
           Size="118,42"
           Id="Package\Foreach File\Load Protocols (DF)\Criterias"
           TopLeft="5541,298" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 4"
+          TopLeft="2768,209" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 15"
           TopLeft="5254.25,135" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15"
-          TopLeft="5264.25,220" />
+          Size="197,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 1"
+          TopLeft="2032,289" />
         <NodeLayout
           Size="185,42"
           Id="Package\Foreach File\Load Protocols (DF)\ProtocolEvasionDetails"
           TopLeft="295,286" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25"
+          TopLeft="7003,216" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 24"
@@ -28337,25 +28349,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 25"
           TopLeft="6999,139" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос"
-          TopLeft="2998,283" />
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец"
+          TopLeft="2274,285" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 24"
-          TopLeft="6764,214" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19"
+          TopLeft="5749,217" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 14"
           TopLeft="5005,135" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 2"
-          TopLeft="3505,209" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9"
-          TopLeft="1794,206" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 23"
@@ -28374,8 +28378,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="1785,130" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23"
-          TopLeft="6499,215" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 24"
+          TopLeft="6764,214" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 10"
@@ -28389,13 +28393,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 13"
           TopLeft="1551,205" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 26"
-          TopLeft="539,207" />
-        <NodeLayout
           Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 7"
-          TopLeft="2276,210" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 5"
+          TopLeft="2515,208" />
         <NodeLayout
           Size="209,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 8"
@@ -28409,9 +28409,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 22"
           TopLeft="6241,136" />
         <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 3"
+          TopLeft="3502,295" />
+        <NodeLayout
           Size="148,42"
           Id="Package\Foreach File\Load Protocols (DF)\EFSummingUp"
           TopLeft="1818,285" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12"
+          TopLeft="4764,221" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 12"
@@ -28422,20 +28430,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="1045,283" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13"
-          TopLeft="1559,284" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11"
+          TopLeft="4514,217" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 2"
+          TopLeft="3505,209" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23"
+          TopLeft="6499,215" />
         <NodeLayout
           Size="209,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 7"
           TopLeft="2262,130" />
         <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 5"
+          TopLeft="6758,297" />
+        <NodeLayout
           Size="129,42"
           Id="Package\Foreach File\Load Protocols (DF)\ZK5Orders"
           TopLeft="6281,296" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 1"
-          TopLeft="3234,206" />
         <NodeLayout
           Size="143,42"
           Id="Package\Foreach File\Load Protocols (DF)\EFAucHolding"
@@ -28445,13 +28461,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 21"
           TopLeft="5994,136" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14"
-          TopLeft="5019.25,222.5" />
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6"
+          TopLeft="4011,216" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19"
-          TopLeft="5749,217" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 17"
+          TopLeft="1041,203" />
         <NodeLayout
           Size="173,42"
           Id="Package\Foreach File\Load Protocols (DF)\PPAppConsideration"
@@ -28473,9 +28489,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\CommissionMembers"
           TopLeft="2768,284" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6"
-          TopLeft="4012,217" />
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 22"
+          TopLeft="6255,218" />
         <NodeLayout
           Size="180,42"
           Id="Package\Foreach File\Load Protocols (DF)\ProtocolCancelDetails"
@@ -28485,9 +28501,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 20"
           TopLeft="782,129" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12"
-          TopLeft="4764,221" />
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 3"
+          TopLeft="3756,216" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 27"
@@ -28502,20 +28518,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="2507,130" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 20"
-          TopLeft="791,204" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18"
-          TopLeft="5506,219" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 16"
+          TopLeft="1291.75,202.5" />
         <NodeLayout
           Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 5"
-          TopLeft="2515,208" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25"
-          TopLeft="7003,216" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9"
+          TopLeft="1794,206" />
         <NodeLayout
           Size="209,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 2"
@@ -28534,12 +28542,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="1561,358" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27"
-          TopLeft="288,206" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21"
+          TopLeft="6005,217" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 1"
+          TopLeft="3234,206" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11"
-          TopLeft="4514,217" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28"
+          TopLeft="27,207" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 8"
+          TopLeft="2037,211" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13"
+          TopLeft="1559,284" />
         <NodeLayout
           Size="122,46"
           Id="Package\Foreach File\Load Protocols (DF)\Protocols"
@@ -28549,17 +28569,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 19"
           TopLeft="5741,135" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 4"
-          TopLeft="2768,209" />
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 26"
+          TopLeft="539,207" />
         <NodeLayout
           Size="209,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 1"
           TopLeft="3224,133" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 17"
-          TopLeft="1041,203" />
         <NodeLayout
           Size="204,42"
           Id="Package\Foreach File\Load Protocols (DF)\EFAppConsiderationDetails"
@@ -28569,6 +28585,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Applications_Suppliers"
           TopLeft="2990,373" />
         <NodeLayout
+          Size="188,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 7"
+          TopLeft="2276,210" />
+        <NodeLayout
           Size="179,42"
           Id="Package\Foreach File\Load Protocols (DF)\OKEnvelopesOpening"
           TopLeft="4523,297" />
@@ -28577,21 +28597,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 28"
           TopLeft="17,129" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 8"
-          TopLeft="2037,211" />
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 20"
+          TopLeft="791,204" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос"
+          TopLeft="2998,283" />
         <NodeLayout
           Size="175,42"
           Id="Package\Foreach File\Load Protocols (DF)\OKAppConsideration"
           TopLeft="5025.5,296.25" />
         <NodeLayout
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27"
+          TopLeft="288,206" />
+        <NodeLayout
           Size="121,42"
           Id="Package\Foreach File\Load Protocols (DF)\Union All"
           TopLeft="3036,133" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 22"
-          TopLeft="6255,218" />
         <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 26"
@@ -28605,277 +28629,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Foreach File\Load Protocols (DF)\ProtocolEvasions"
           TopLeft="553,383" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 10"
-          TopLeft="4268,216" />
-        <NodeLayout
           Size="215,42"
           Id="Package\Foreach File\Load Protocols (DF)\Преобразование данных 17"
           TopLeft="1031,128" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 3"
-          TopLeft="3756,216" />
+          Size="193,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 10"
+          TopLeft="4268,216" />
         <NodeLayout
           Size="173,42"
           Id="Package\Foreach File\Load Protocols (DF)\EFAppConsideration"
           TopLeft="2519,286" />
         <NodeLayout
           Size="193,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 16"
-          TopLeft="1291.75,202.5" />
+          Id="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14"
+          TopLeft="5019.25,222.5" />
         <NodeLayout
           Size="135,42"
           Id="Package\Foreach File\Load Protocols (DF)\Applications"
           TopLeft="3529,368" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 4"
+          TopLeft="3756,297" />
         <NodeLayout
           Size="207,42"
           Id="Package\Foreach File\Load Protocols (DF)\OKAppConsiderationDetails"
           TopLeft="5253,297.5" />
         <EdgeLayout
           Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных28]"
-          TopLeft="4862,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46"
-              Start="0,0"
-              End="0,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных27]"
-          TopLeft="2610.25,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных26]"
-          TopLeft="124,171">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных25]"
-          TopLeft="3850.25,174">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных24]"
-          TopLeft="2368.25,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных23]"
-          TopLeft="3597.75,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных22]"
-          TopLeft="1657,247">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных21]"
-          TopLeft="6857.5,179">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных20]"
-          TopLeft="7103,181">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных19]"
-          TopLeft="6350,178">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных18]"
-          TopLeft="384.5,171">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных17]"
           TopLeft="2132.75,172">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28897,206 +28679,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных16]"
-          TopLeft="635.5,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных15]"
-          TopLeft="6596,178">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных14]"
-          TopLeft="1888.75,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных13]"
-          TopLeft="2863.75,173">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных12]"
-          TopLeft="888.5,171">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных11]"
-          TopLeft="6101.5,178">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных10]"
-          TopLeft="5114.125,177">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.5"
-              Start="0,0"
-              End="0,38">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных9]"
-          TopLeft="3328.25,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных8]"
-          TopLeft="1390,169.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных7]"
-          TopLeft="5361.25,177">
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных27]"
+          TopLeft="5603,176">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -29117,117 +28701,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных6]"
-          TopLeft="4611,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных5]"
-          TopLeft="4105.75,173">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных4]"
-          TopLeft="4362.5,174">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных3]"
-          TopLeft="3088.5,250">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных2]"
-          TopLeft="5847,177">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных1]"
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных26]"
           TopLeft="1138,170">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29249,8 +28723,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных]"
-          TopLeft="5603,176">
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных25]"
+          TopLeft="5847,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных24]"
+          TopLeft="3088.5,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных23]"
+          TopLeft="4362.5,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных22]"
+          TopLeft="4105.25,173">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -29268,6 +28808,790 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных21]"
+          TopLeft="4611,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных20]"
+          TopLeft="5361.25,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных19]"
+          TopLeft="1390,169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных18]"
+          TopLeft="3328.25,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных17]"
+          TopLeft="5114.125,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.5"
+              Start="0,0"
+              End="0,38">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных16]"
+          TopLeft="6101.5,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных15]"
+          TopLeft="4862,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных14]"
+          TopLeft="2610.25,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных13]"
+          TopLeft="124,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных12]"
+          TopLeft="3850.25,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных11]"
+          TopLeft="2368.25,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных10]"
+          TopLeft="3597.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных9]"
+          TopLeft="1657,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных8]"
+          TopLeft="6857.5,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных7]"
+          TopLeft="7103,181">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных6]"
+          TopLeft="6350,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных5]"
+          TopLeft="384.5,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных4]"
+          TopLeft="888.5,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных3]"
+          TopLeft="635.5,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных2]"
+          TopLeft="6596,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных1]"
+          TopLeft="1888.75,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выходные данные преобразования данных]"
+          TopLeft="2863.75,173">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца5]"
+          TopLeft="3855.75,339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца4]"
+          TopLeft="6857,339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца3]"
+          TopLeft="2368.25,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца2]"
+          TopLeft="634.25,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца1]"
+          TopLeft="2129,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца]"
+          TopLeft="3598.5,337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;28]"
+          TopLeft="6858.5,256">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,10.75,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;27]"
+          TopLeft="3852.25,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,9.75,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;26]"
+          TopLeft="3599.75,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,12.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;25]"
+          TopLeft="636,249">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,10.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;24]"
+          TopLeft="2130.75,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,8.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;23]"
+          TopLeft="2607.25,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,8.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;22]"
+          TopLeft="2369,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,6.75,250.2397265625,12"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29488,25 +29812,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;12]"
-          TopLeft="6593.75,257">
+          TopLeft="5844.5,259">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="0,37"
               Start="0,0"
-              End="0,32.5">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,10.25,250.2397265625,12"
+              BoundingBox="-125.11986328125,8.75,250.2397265625,12"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -29536,54 +29860,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;10]"
-          TopLeft="5844.5,259">
+          TopLeft="6593.75,257">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,40"
               Start="0,0"
-              End="0,29.5">
+              End="0,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,8.75,250.2397265625,12"
+              BoundingBox="-125.11986328125,10.25,250.2397265625,12"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;9]"
-          TopLeft="1652.5,326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,6.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;8]"
           TopLeft="7100.75,258">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29607,7 +29907,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;7]"
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;8]"
           TopLeft="4863.75,263">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29631,127 +29931,55 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;6]"
-          TopLeft="6099.5,259">
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;7]"
+          TopLeft="1652.5,326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,32"
               Start="0,0"
-              End="0,30.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
+              BoundingBox="-125.11986328125,6.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;6]"
+          TopLeft="124.75,249">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,8.75,250.2397265625,12"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;5]"
-          TopLeft="4611.5,259">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;4]"
-          TopLeft="4365,258">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.75,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;3]"
-          TopLeft="4106.5,259">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.75,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;2]"
-          TopLeft="386,248">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
           TopLeft="1890,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29775,26 +30003,122 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
-          TopLeft="124.75,249">
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;4]"
+          TopLeft="386,248">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,29.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,8.75,250.2397265625,12"
+              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;3]"
+          TopLeft="4106,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,10.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;2]"
+          TopLeft="4365,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,9.75,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;1]"
+          TopLeft="4611.5,259">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;]"
+          TopLeft="6099.5,259">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.11986328125,9.25,250.2397265625,12"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -31198,333 +31522,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец"
-          TopLeft="2274,285" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;22]"
-          TopLeft="2369,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,6.75,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца]"
-          TopLeft="2368.25,327">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;23]"
-          TopLeft="2607.25,250">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,8.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 1"
-          TopLeft="2032,289" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;24]"
-          TopLeft="2130.75,253">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,8.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца1]"
-          TopLeft="2129,331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 2"
-          TopLeft="538,289" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;25]"
-          TopLeft="636,249">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,10.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца2]"
-          TopLeft="634.25,331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 3"
-          TopLeft="3502,295" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;26]"
-          TopLeft="3599.75,251">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,12.25,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца3]"
-          TopLeft="3598.5,337">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 4"
-          TopLeft="3756,297" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;27]"
-          TopLeft="3852.25,258">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,9.75,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца4]"
-          TopLeft="3855.75,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Foreach File\Load Protocols (DF)\Производный столбец 5"
-          TopLeft="6758,297" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Вывод ошибок преобразования &quot;Уточняющий запрос&quot;28]"
-          TopLeft="6858.5,256">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-125.11986328125,10.75,250.2397265625,12"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File\Load Protocols (DF).Paths[Выход производного столбца5]"
-          TopLeft="6857,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Protocols (DF)\ProtocolEvasionReasons">
     <Properties>
@@ -31535,29 +31558,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[ZK5AppConsideration]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -31575,12 +31575,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31611,12 +31611,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 15">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 4">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31647,6 +31647,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Protocols (DF)\ZKAppConsideration">
     <Properties>
       <Property>
@@ -31660,81 +31683,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 24">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 2">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31778,12 +31732,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 24">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31814,35 +31768,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 26">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 5">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 7">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31886,6 +31817,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[ContractConditions]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Protocols (DF)\ContractConditionResults">
     <Properties>
       <Property>
@@ -31899,12 +31853,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 23">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31935,29 +31935,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Protocols (DF)\EFAucHolding">
     <Properties>
       <Property>
@@ -31971,12 +31948,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -31994,12 +31971,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 19">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 17">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32056,12 +32033,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 6">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 22">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32092,12 +32069,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 12">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 3">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32128,53 +32105,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 20">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 18">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 5">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 16">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -32197,12 +32128,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 25">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 9">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32246,7 +32177,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 21">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -32256,12 +32187,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[ProtocolEvasionDetails]</Value>
+          type="q3:string">[ZK5AppConsideration]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -32269,12 +32200,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 11">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 1">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 28">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 8">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 13">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32305,35 +32305,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 4">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 26">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 17">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32377,6 +32354,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 7">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Protocols (DF)\OKEnvelopesOpening">
     <Properties>
       <Property>
@@ -32390,12 +32390,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 8">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 20">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32426,17 +32449,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 22">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 27">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[ProtocolEvasionDetails]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -32467,30 +32490,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 3">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -32521,22 +32521,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 16">
+    design-time-name="Package\Foreach File\Load Protocols (DF)\Уточняющий запрос 14">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[OKAppConsideration]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

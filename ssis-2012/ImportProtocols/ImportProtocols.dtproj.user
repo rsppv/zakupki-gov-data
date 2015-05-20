@@ -4,6 +4,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <ServerName />
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
