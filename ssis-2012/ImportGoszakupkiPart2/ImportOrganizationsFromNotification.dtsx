@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/21/2015 2:20:20 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="POP-PC"
+  DTS:CreatorName="pop-pc\pop"
+  DTS:DTSID="{09976FCB-63EC-4BDB-BD4B-B34D21DCD79E}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="ImportNotificationCancels"
+  DTS:PackageType="5"
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{5BC2303B-500D-4C06-8943-3AFD42A4A740}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Failed folder]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{052C7650-6896-4F24-9EA3-44844E561693}"
+      DTS:ObjectName="Failed folder">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="F:\ObtainScrubData\XmlFiles\notification\failed" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Log file]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{B5A0FACD-33CF-4C9C-AC5B-FDA9CF3EB9DC}"
+      DTS:ObjectName="Log file">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[System::PackageName]+"_"+ (DT_WSTR, 4) YEAR( GETDATE() ) +"-"+ RIGHT( "00"+(DT_WSTR, 2) MONTH( GETDATE() ), 2 ) +"-" +  RIGHT( "00"+(DT_WSTR, 2) DAY( GETDATE() ), 2 ) +"_" + (DT_WSTR, 2) DATEPART( "hh", GETDATE() ) +"-" + (DT_WSTR, 2) DATEPART( "n", GETDATE() ) +"-" + (DT_WSTR, 2) DATEPART( "ss", GETDATE() ) + ".txt"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="ImportNotificationCancels_2015-05-21_17-46-24.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Processed folder]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{18CB7995-207D-44E0-A19A-7F97E5D531FD}"
+      DTS:ObjectName="Processed folder">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="F:\ObtainScrubData\XmlFiles\notification\processed" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceXMLData]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{FD82C0B2-9FB9-44B2-A962-56DB222D3C5C}"
+      DTS:ObjectName="SourceXMLData">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceDirectoryPath] +  @[User::FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="f:\ObtainScrubData\XmlFiles\notification\xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Staging DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EA64B4BB-7763-4C34-9B4A-BC543964253F}"
+      DTS:ObjectName="Staging DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=pop-pc;Initial Catalog=TestImport;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[StylesForOrganizationFromNotif.xsl]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{B8A0A5A1-D519-4176-803C-FE6AFF5B2B0E}"
+      DTS:ObjectName="StylesForOrganizationFromNotif.xsl">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\StylesForOrganizationFromNotif.xsl" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[StylesWithoutNamespaces.xsl]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F4A384CF-CFAE-4F33-A53D-FD73F3808415}"
+      DTS:ObjectName="StylesWithoutNamespaces.xsl">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\StylesWithoutNamespaces.xsl" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="Log file"
+      DTS:CreationName="DTS.LogProviderTextFile.3"
+      DTS:Description="Записывает элементы журнала для событий в CSV-файл"
+      DTS:DTSID="{126E2DF4-2D85-4F51-A8B0-CB0B58EF0789}"
+      DTS:ObjectName="Регистратор служб SSIS для текстовых файлов">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{758234A4-B36D-44B9-B7FA-B74DF283A017}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">xml</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{18DC4A32-D1E0-4B1F-BABD-74092A135287}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LogFileExpr">
+      <DTS:VariableValue
+        DTS:DataType="8">insert into ProcessedFiles select ?, getdate()</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6213FA3B-901C-445E-B19D-88A6F0EF8267}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceDirectoryPath">
+      <DTS:VariableValue
+        DTS:DataType="8">f:\ObtainScrubData\XmlFiles\notification\</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">5,7,OnError,13,OnInformation,10,OnProgress,12,OnTaskFailed,9,OnWarning</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnProgress"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnWarning"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{126E2DF4-2D85-4F51-A8B0-CB0B58EF0789}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FELC notification files"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Контейнер &quot;Цикл по каждому элементу&quot;"
+      DTS:DTSID="{94D60006-D8DE-4871-8510-E8F83B124B7F}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FELC notification files">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="DTS.ForEachFileEnumerator.3"
+        DTS:DTSID="{EC6DDF6E-3B69-4F56-BBEB-6A659F8D1701}"
+        DTS:ObjectName="{EC6DDF6E-3B69-4F56-BBEB-6A659F8D1701}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceDirectoryPath]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="f:\ObtainScrubData\XmlFiles\notification\" />
+            <FEFEProperty
+              FileSpec="notification*.xml" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{3AEEC54A-3981-4F08-BFEC-F75FD8A7CBBD}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="isProcessedResult">
+          <DTS:VariableValue
+            DTS:DataType="11">0</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{25468B81-9459-4BAC-B361-8EDD4EE01B4C}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="TransformedXMLData">
+          <DTS:VariableValue
+            DTS:DataType="8">xml</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\DFT Load organizations from notifications"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Задача потока данных"
+          DTS:DTSID="{08D8978F-122C-402F-9A53-2F5065A27F45}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT Load organizations from notifications"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+                  description="Назначение &quot;OLE DB&quot;"
+                  name="OLE_DST OrganizationsFromNotif"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                      name="OpenRowset">[dbo].[OrganizationsFromNotif]</property>
+                    <property
+                      dataType="System.String"
+                      description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Команда SQL для выполнения."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                      name="DefaultCodePage">1251</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Указывает используемый режим доступа к базе данных."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadOptions">TABLOCK</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Staging DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[Staging DB]"
+                      description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                      errorOrTruncationOperation="Вставить"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Вход назначения &quot;OLE DB&quot;">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[regNum]"
+                          cachedDataType="i8"
+                          cachedName="regNum"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[regNum]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[regNum]" />
+                        <inputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[fullName]"
+                          cachedDataType="wstr"
+                          cachedLength="2000"
+                          cachedName="fullName"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[fullName]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[fullName]" />
+                        <inputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[placerOrgType]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="placerOrgType"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[placerOrgType]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[placerOrgType]" />
+                        <inputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[orgFactAddress]"
+                          cachedDataType="nText"
+                          cachedName="orgFactAddress"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[orgFactAddress]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[orgFactAddress]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[regNum]"
+                          dataType="i8"
+                          name="regNum" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[fullName]"
+                          dataType="wstr"
+                          length="2000"
+                          name="fullName" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[placerOrgType]"
+                          dataType="wstr"
+                          length="2"
+                          name="placerOrgType" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[orgFactAddress]"
+                          dataType="nText"
+                          name="orgFactAddress" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                      synchronousInputId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Извлекает данные из XML-файла. Пример: извлечение данных каталога из XML-файла, представляющего каталоги и элементы каталогов. Перед использованием необходимо указать схему и сформировать выходные данные для всех XML-элементов.Корпорация Майкрософт (Microsoft Corporation). Microsoft SQL Server. Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support2"
+                  description="Извлекает данные из XML-файла. Пример: извлечение данных каталога из XML-файла, представляющего каталоги и элементы каталогов. Перед использованием необходимо указать схему и сформировать выходные данные для всех XML-элементов."
+                  name="XML_SRC notification file"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter, Microsoft.SqlServer.XmlSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                    <property
+                      dataType="System.String"
+                      description="XML-данные, используемые адаптером источника XML-данных."
+                      expressionType="Notify"
+                      name="XMLData">f:\ObtainScrubData\XmlFiles\notification\test_cancel.xml</property>
+                    <property
+                      dataType="System.String"
+                      description="Переменная, используемая адаптером источника XML-данных для указания XML-данных."
+                      name="XMLDataVariable">User::TransformedXMLData</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Определяет, каким образом адаптер источника XML-данных получает XML-данные."
+                      name="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="Определение XML-схемы, используемое адаптером источника XML-данных."
+                      expressionType="Notify"
+                      name="XMLSchemaDefinition">C:\Users\pop\Documents\Visual Studio 2013\Projects\zakupki-gov-data\zakupki-gov-data\Import_OrganizationsFromNotifSchema.xsd</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Указывает, использовать ли встроенную схему."
+                      name="UseInlineSchema">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Определяет способ сопоставления типов целочисленных значений XML."
+                      name="XMLIntegerMapping"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter, Microsoft.SqlServer.XmlSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">0</property>
+                  </properties>
+                  <outputs>
+                    <output
+                      refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization]"
+                      name="organization">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Определяет набор строк, связанный с выходом."
+                          name="RowsetID">organization</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[regNum]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[regNum]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[regNum]"
+                          name="regNum"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[fullName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[fullName]"
+                          length="2000"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[fullName]"
+                          name="fullName"
+                          truncationRowDisposition="IgnoreFailure" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[placerOrgType]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[placerOrgType]"
+                          length="2"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[placerOrgType]"
+                          name="placerOrgType"
+                          truncationRowDisposition="IgnoreFailure" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[orgFactAddress]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Преобразование"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[orgFactAddress]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].Columns[orgFactAddress]"
+                          name="orgFactAddress"
+                          truncationRowDisposition="IgnoreFailure" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[regNum]"
+                          dataType="i8"
+                          name="regNum">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.Int64</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[fullName]"
+                          dataType="wstr"
+                          length="2000"
+                          name="fullName">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[placerOrgType]"
+                          dataType="wstr"
+                          length="2"
+                          name="placerOrgType">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization].ExternalColumns[orgFactAddress]"
+                          dataType="nText"
+                          name="orgFactAddress">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization]"
+                      isErrorOut="true"
+                      name="Вывод ошибок organization">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Определяет набор строк, связанный с выходом."
+                          name="RowsetID">organization</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[regNum]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[regNum]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[regNum]"
+                          name="regNum" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[fullName]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[fullName]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[fullName]"
+                          name="fullName" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[placerOrgType]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[placerOrgType]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[placerOrgType]"
+                          name="placerOrgType" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[orgFactAddress]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[orgFactAddress]"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[orgFactAddress]"
+                          name="orgFactAddress" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[regNum]"
+                          dataType="nText"
+                          name="regNum" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[fullName]"
+                          dataType="nText"
+                          name="fullName" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[placerOrgType]"
+                          dataType="nText"
+                          name="placerOrgType" />
+                        <externalMetadataColumn
+                          refId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[Вывод ошибок organization].ExternalColumns[orgFactAddress]"
+                          dataType="nText"
+                          name="orgFactAddress" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FELC notification files\DFT Load organizations from notifications.Paths[organization]"
+                  endId="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  name="organization"
+                  startId="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file.Outputs[organization]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\FSYS Move file to failed folder"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Файловая система&quot;"
+          DTS:DTSID="{1FA21D69-5B1C-4E98-ABC3-30DB574B3798}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FSYS Move file to failed folder"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="{FD82C0B2-9FB9-44B2-A962-56DB222D3C5C}"
+              TaskDestinationPath="{052C7650-6896-4F24-9EA3-44844E561693}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\FSYS Move File to processed folder"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Файловая система&quot;"
+          DTS:DTSID="{60FD5141-8B06-4970-826C-32C17FC6A1B7}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FSYS Move File to processed folder"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="{FD82C0B2-9FB9-44B2-A962-56DB222D3C5C}"
+              TaskDestinationPath="{18CB7995-207D-44E0-A19A-7F97E5D531FD}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\SQL File is processed?"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Выполнение SQL&quot;"
+          DTS:DTSID="{9047181C-8CA1-413F-B934-07D651AFCC80}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL File is processed?"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{821980F0-4E6C-48F5-BF5C-8B78B0E19E2D}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="isProcessedExpr">
+              <DTS:VariableValue
+                DTS:DataType="8">if exists (select * from ProcessedFiles where (FileName = ?)) select 1 as isProcessed else select 0 as isProcessed</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{EA64B4BB-7763-4C34-9B4A-BC543964253F}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::isProcessedExpr"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="isProcessed"
+                SQLTask:DtsVariableName="User::isProcessedResult" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::FileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\SQL Logging file"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;Выполнение SQL&quot;"
+          DTS:DTSID="{3D03CC90-4CB5-45DB-BFB5-A6CA750F0A87}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL Logging file"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{EA64B4BB-7763-4C34-9B4A-BC543964253F}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::LogFileExpr" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::FileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\XML Delete namespaces"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;XML&quot;"
+          DTS:DTSID="{88220ABB-76D4-40BE-9C36-6FDA33509B04}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="XML Delete namespaces"
+          DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <XMLTaskData
+              OperationType="XSLT"
+              Source="SourceXMLData"
+              SecondOperandType="FileConnection"
+              SecondOperand="StylesWithoutNamespaces.xsl"
+              SaveOperationResult="True"
+              DestinationType="Variable"
+              Destination="User::TransformedXMLData"
+              OverwriteDestination="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FELC notification files\XML Simplify File"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Задача &quot;XML&quot;"
+          DTS:DTSID="{A4065F90-C8C7-47C1-BE5C-DB09CF7E9556}"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask, Microsoft.SqlServer.XMLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="XML Simplify File"
+          DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <XMLTaskData
+              OperationType="XSLT"
+              SourceType="Variable"
+              Source="User::TransformedXMLData"
+              SecondOperandType="FileConnection"
+              SecondOperand="StylesForOrganizationFromNotif.xsl"
+              SaveOperationResult="True"
+              DestinationType="Variable"
+              Destination="User::TransformedXMLData"
+              OverwriteDestination="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение]"
+          DTS:CreationName=""
+          DTS:DTSID="{23C2FFEF-CB18-47C7-B854-337539C5599A}"
+          DTS:EvalOp="3"
+          DTS:Expression="@isProcessedResult == false"
+          DTS:From="Package\FELC notification files\SQL File is processed?"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение"
+          DTS:To="Package\FELC notification files\XML Delete namespaces" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{6D08D7EA-FF41-46EE-93CE-08A32312C24C}"
+          DTS:From="Package\FELC notification files\XML Delete namespaces"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 1"
+          DTS:To="Package\FELC notification files\XML Simplify File" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{A26E5B1D-23D9-4FA1-89CC-CCD7D1A691FA}"
+          DTS:From="Package\FELC notification files\XML Simplify File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 2"
+          DTS:To="Package\FELC notification files\DFT Load organizations from notifications" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{2598940E-9C6E-45EC-B925-8254651D6620}"
+          DTS:From="Package\FELC notification files\DFT Load organizations from notifications"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 3"
+          DTS:To="Package\FELC notification files\SQL Logging file" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{8541B5D4-2846-410D-A73F-57E932B1AB92}"
+          DTS:From="Package\FELC notification files\DFT Load organizations from notifications"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 4"
+          DTS:To="Package\FELC notification files\FSYS Move file to failed folder"
+          DTS:Value="1" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FELC notification files.PrecedenceConstraints[Ограничение 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{37A3ABAA-8644-4636-983D-54691690F6A2}"
+          DTS:From="Package\FELC notification files\SQL Logging file"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Ограничение 5"
+          DTS:To="Package\FELC notification files\FSYS Move File to processed folder" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{DED6AE10-1691-40D4-B3B0-4CC2CF40052A}"
+          DTS:ObjectName="{DED6AE10-1691-40D4-B3B0-4CC2CF40052A}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="sql11">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="275,42"
+          Id="Package\FELC notification files\DFT Load organizations from notifications"
+          TopLeft="239,311.5" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\FELC notification files\FSYS Move file to failed folder"
+          TopLeft="303.5,413.5" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\FELC notification files\FSYS Move File to processed folder"
+          TopLeft="81.5000000000001,512.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\FELC notification files\SQL File is processed?"
+          TopLeft="285,5.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\FELC notification files\SQL Logging file"
+          TopLeft="126.5,415.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\FELC notification files\XML Delete namespaces"
+          TopLeft="280,107.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\FELC notification files\XML Simplify File"
+          TopLeft="297.5,209.5" />
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение]"
+          TopLeft="376.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="376.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="376.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение 3]"
+          TopLeft="332,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.5,62"
+              Start="0,0"
+              End="-127.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0151843817787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0151843817787"
+                    Point2="0,25.0151843817787"
+                    Point3="-4,25.0151843817787" />
+                  <mssgle:LineSegment
+                    End="-123.5,25.0151843817787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.5,25.0151843817787"
+                    Point2="-127.5,25.0151843817787"
+                    Point3="-127.5,29.0151843817787" />
+                  <mssgle:LineSegment
+                    End="-127.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение 4]"
+          TopLeft="417.25,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.79421875,21.18017578125,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FELC notification files.PrecedenceConstraints[Ограничение 5]"
+          TopLeft="204,457.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="528,612"
+          Size="528,655"
+          Id="Package\FELC notification files"
+          TopLeft="288,98" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FELC notification files\DFT Load organizations from notifications">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="196,42"
+          Id="Package\FELC notification files\DFT Load organizations from notifications\XML_SRC notification file"
+          TopLeft="479,49" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif"
+          TopLeft="458,146" />
+        <EdgeLayout
+          Id="Package\FELC notification files\DFT Load organizations from notifications.Paths[organization]"
+          TopLeft="576.75,91">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FELC notification files\DFT Load organizations from notifications\OLE_DST OrganizationsFromNotif">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -5,6 +5,7 @@
       <Name>Development</Name>
       <Options>
         <ServerName />
+        <StartObjectID>ImportNotificationCancels.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
