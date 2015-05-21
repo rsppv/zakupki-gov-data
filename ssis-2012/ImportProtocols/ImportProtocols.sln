@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ImportProtocols", "ImportProtocols.dtproj", "{B85C4CC4-46FD-4D6D-9C5D-ACDEA7DC5A10}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ImportGoszakupkiPart2", "ImportGoszakupkiPart2.dtproj", "{B85C4CC4-46FD-4D6D-9C5D-ACDEA7DC5A10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
