@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="ImportContract_new"
   DTS:PackageType="5"
-  DTS:VersionBuild="159"
-  DTS:VersionGUID="{866CD2AB-BBC7-40D4-9576-F169EC796303}">
+  DTS:VersionBuild="162"
+  DTS:VersionGUID="{60138EEF-F952-48F6-9B53-E58E9FD807F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -308,6 +308,7 @@
             DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
+              defaultBufferMaxRows="900"
               version="1">
               <components>
                 <component
@@ -6848,6 +6849,7 @@ where [refTable].[contractProcedureID] = ? and [refTable].[contractParty] = ? an
             DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
+              defaultBufferMaxRows="900"
               version="1">
               <components>
                 <component
@@ -13331,6 +13333,7 @@ where [refTable].[regNum] = ?</property>
             DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
+              defaultBufferMaxRows="900"
               version="1">
               <components>
                 <component
@@ -18241,11 +18244,22 @@ where [refTable].[contractSign_Id] = ? and [refTable].[id] = ?</property>
           DTS:MaxErrorCount="5"
           DTS:ObjectName="Load Suppliers (DF)"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{A2E782BD-95A6-4AB0-812E-ED94687956FA}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="Variable">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
+              defaultBufferMaxRows="900"
               version="1">
               <components>
                 <component
@@ -18726,7 +18740,8 @@ where [refTable].[contractSign_Id] = ? and [refTable].[id] = ?</property>
                           lineageId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[participantType]" />
                         <inputColumn
                           refId="Package\Foreach File\Load Suppliers (DF)\Data Conv (suppliers - Contract).Inputs[Входные данные преобразования данных].Columns[inn]"
-                          cachedDataType="ui8"
+                          cachedDataType="wstr"
+                          cachedLength="12"
                           cachedName="inn"
                           lineageId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[inn]" />
                         <inputColumn
@@ -21266,13 +21281,14 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[inn]"
-                          dataType="ui8"
+                          dataType="wstr"
                           errorOrTruncationOperation="Преобразование"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].ExternalColumns[inn]"
+                          length="12"
                           lineageId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[inn]"
                           name="inn"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].Columns[organizationName]"
                           dataType="nText"
@@ -21366,7 +21382,8 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
                         </externalMetadataColumn>
                         <externalMetadataColumn
                           refId="Package\Foreach File\Load Suppliers (DF)\Источник &quot;XML&quot;.Outputs[export__contract__suppliers__supplier].ExternalColumns[inn]"
-                          dataType="ui8"
+                          dataType="wstr"
+                          length="12"
                           name="inn">
                           <properties>
                             <property
@@ -24941,6 +24958,10 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Logging File"
           TopLeft="598.5,413.5" />
         <NodeLayout
+          Size="199,42"
+          Id="Package\Foreach File\Move File to Failed Folder"
+          TopLeft="312.5,513.5" />
+        <NodeLayout
           Size="219,42"
           Id="Package\Foreach File\Move File to Processed Folder"
           TopLeft="560.5,515.5" />
@@ -25026,6 +25047,150 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 11]"
+          TopLeft="84.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="327.5,160"
+              Start="0,0"
+              End="327.5,152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.6547314578005" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.6547314578005"
+                    Point2="0,64.6547314578005"
+                    Point3="4,64.6547314578005" />
+                  <mssgle:LineSegment
+                    End="323.5,64.6547314578005" />
+                  <mssgle:CubicBezierSegment
+                    Point1="323.5,64.6547314578005"
+                    Point2="327.5,64.6547314578005"
+                    Point3="327.5,68.6547314578005" />
+                  <mssgle:LineSegment
+                    End="327.5,152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="151.95578125,69.6547314578005,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 12]"
+          TopLeft="375,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.8333333333333,160"
+              Start="0,0"
+              End="68.8333333333333,152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.9119369468539" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.9119369468539"
+                    Point2="0,79.9119369468539"
+                    Point3="4,79.9119369468539" />
+                  <mssgle:LineSegment
+                    End="64.8333333333333,79.9119369468539" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.8333333333333,79.9119369468539"
+                    Point2="68.8333333333333,79.9119369468539"
+                    Point3="68.8333333333333,83.9119369468539" />
+                  <mssgle:LineSegment
+                    End="68.8333333333333,152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.6224479166667,84.9119369468539,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 13]"
+          TopLeft="642.666666666667,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-182.916666666667,160"
+              Start="0,0"
+              End="-182.916666666667,152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.7842597242698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,86.7842597242698"
+                    Point2="0,90.7842597242698"
+                    Point3="-4,90.7842597242698" />
+                  <mssgle:LineSegment
+                    End="-178.916666666667,90.7842597242698" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-178.916666666667,90.7842597242698"
+                    Point2="-182.916666666667,90.7842597242698"
+                    Point3="-182.916666666667,94.7842597242698" />
+                  <mssgle:LineSegment
+                    End="-182.916666666667,152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-103.252552083333,95.7842597242698,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 14]"
+          TopLeft="883,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-413.7,160"
+              Start="0,0"
+              End="-413.7,152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.562905707103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,94.562905707103"
+                    Point2="0,98.562905707103"
+                    Point3="-4,98.562905707103" />
+                  <mssgle:LineSegment
+                    End="-409.7,98.562905707103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-409.7,98.562905707103"
+                    Point2="-413.7,98.562905707103"
+                    Point3="-413.7,102.562905707103" />
+                  <mssgle:LineSegment
+                    End="-413.7,152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-218.64421875,103.562905707103,23.5884375,10.1396484375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25288,154 +25453,6 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Foreach File\Move File to Failed Folder"
-          TopLeft="312.5,513.5" />
-        <EdgeLayout
-          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 11]"
-          TopLeft="84.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="327.5,160"
-              Start="0,0"
-              End="327.5,152.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.6547314578005" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,60.6547314578005"
-                    Point2="0,64.6547314578005"
-                    Point3="4,64.6547314578005" />
-                  <mssgle:LineSegment
-                    End="323.5,64.6547314578005" />
-                  <mssgle:CubicBezierSegment
-                    Point1="323.5,64.6547314578005"
-                    Point2="327.5,64.6547314578005"
-                    Point3="327.5,68.6547314578005" />
-                  <mssgle:LineSegment
-                    End="327.5,152.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="151.95578125,69.6547314578005,23.5884375,10.1396484375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 12]"
-          TopLeft="375,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="68.8333333333333,160"
-              Start="0,0"
-              End="68.8333333333333,152.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,75.9119369468539" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,75.9119369468539"
-                    Point2="0,79.9119369468539"
-                    Point3="4,79.9119369468539" />
-                  <mssgle:LineSegment
-                    End="64.8333333333333,79.9119369468539" />
-                  <mssgle:CubicBezierSegment
-                    Point1="64.8333333333333,79.9119369468539"
-                    Point2="68.8333333333333,79.9119369468539"
-                    Point3="68.8333333333333,83.9119369468539" />
-                  <mssgle:LineSegment
-                    End="68.8333333333333,152.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="22.6224479166667,84.9119369468539,23.5884375,10.1396484375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 13]"
-          TopLeft="642.666666666667,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-182.916666666667,160"
-              Start="0,0"
-              End="-182.916666666667,152.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.7842597242698" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,86.7842597242698"
-                    Point2="0,90.7842597242698"
-                    Point3="-4,90.7842597242698" />
-                  <mssgle:LineSegment
-                    End="-178.916666666667,90.7842597242698" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-178.916666666667,90.7842597242698"
-                    Point2="-182.916666666667,90.7842597242698"
-                    Point3="-182.916666666667,94.7842597242698" />
-                  <mssgle:LineSegment
-                    End="-182.916666666667,152.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-103.252552083333,95.7842597242698,23.5884375,10.1396484375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach File.PrecedenceConstraints[Ограничение 14]"
-          TopLeft="883,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-413.7,160"
-              Start="0,0"
-              End="-413.7,152.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,94.562905707103" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,94.562905707103"
-                    Point2="0,98.562905707103"
-                    Point3="-4,98.562905707103" />
-                  <mssgle:LineSegment
-                    End="-409.7,98.562905707103" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-409.7,98.562905707103"
-                    Point2="-413.7,98.562905707103"
-                    Point3="-413.7,102.562905707103" />
-                  <mssgle:LineSegment
-                    End="-413.7,152.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-218.64421875,103.562905707103,23.5884375,10.1396484375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -25453,6 +25470,10 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="181,42"
+          Id="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 1"
+          TopLeft="377,229" />
+        <NodeLayout
+          Size="181,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (penalties)"
           TopLeft="871,133" />
         <NodeLayout
@@ -25460,67 +25481,41 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
           Id="Package\Foreach File\Load Contract Procedures (DF)\Источник &quot;XML&quot;"
           TopLeft="511,24" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (executions)"
-          TopLeft="116,135" />
+          Size="181,42"
+          Id="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 2"
+          TopLeft="631,227" />
         <NodeLayout
           Size="198,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (terminations)"
           TopLeft="618,133" />
         <NodeLayout
           Size="181,42"
-          Id="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 1"
-          TopLeft="377,229" />
-        <NodeLayout
-          Size="181,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 4"
           TopLeft="874,224" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (procedure)"
-          TopLeft="371,133" />
         <NodeLayout
           Size="231,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\ExecutionsInContractProcedures"
           TopLeft="89,319" />
         <NodeLayout
-          Size="181,42"
-          Id="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 2"
-          TopLeft="631,227" />
-        <NodeLayout
           Size="223,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\PenaltiesInContractProcedures"
           TopLeft="855,318" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (executions)"
+          TopLeft="116,135" />
+        <NodeLayout
+          Size="242,42"
+          Id="Package\Foreach File\Load Contract Procedures (DF)\TerminationsInContractProcedures"
+          TopLeft="600,319" />
         <NodeLayout
           Size="171,42"
           Id="Package\Foreach File\Load Contract Procedures (DF)\ContractProcedures"
           TopLeft="385,319" />
         <NodeLayout
-          Size="242,42"
-          Id="Package\Foreach File\Load Contract Procedures (DF)\TerminationsInContractProcedures"
-          TopLeft="600,319" />
-        <EdgeLayout
-          Id="Package\Foreach File\Load Contract Procedures (DF).Paths[Выходные данные преобразования данных2]"
-          TopLeft="963,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="187,42"
+          Id="Package\Foreach File\Load Contract Procedures (DF)\Data Conv (procedure)"
+          TopLeft="371,133" />
         <EdgeLayout
           Id="Package\Foreach File\Load Contract Procedures (DF).Paths[Выходные данные преобразования данных1]"
           TopLeft="719.25,175">
@@ -25803,32 +25798,31 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach File\Load Contract Procedures (DF).Paths[Выходные данные преобразования данных2]"
+          TopLeft="963,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 4">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 1">
     <Properties>
@@ -25854,6 +25848,19 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File\Load Contract Procedures (DF)\TerminationsInContractProcedures">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File\Load Contract Procedures (DF)\PenaltiesInContractProcedures">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -25915,15 +25922,25 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Foreach File\Load Contract Procedures (DF)\PenaltiesInContractProcedures">
+    design-time-name="Package\Foreach File\Load Contract Procedures (DF)\Match missing rows 4">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -25987,9 +26004,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26011,9 +26026,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26035,9 +26048,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26312,9 +26323,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26480,9 +26489,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26504,9 +26511,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26607,37 +26612,37 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File\Load Suppliers (DF).Paths[export__contract__suppliers__supplier]"
-          TopLeft="432.666666666667,146">
+          TopLeft="442.6,146">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49.1666666666667,64"
+              EndConnector="-59.1,64"
               Start="0,0"
-              End="-49.1666666666667,56.5">
+              End="-59.1,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.9873896595208" />
+                    End="0,24.6446164672766" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.9873896595208"
-                    Point2="0,25.9873896595208"
-                    Point3="-4,25.9873896595208" />
+                    Point1="0,24.6446164672766"
+                    Point2="0,28.6446164672766"
+                    Point3="-4,28.6446164672766" />
                   <mssgle:LineSegment
-                    End="-45.1666666666667,25.9873896595208" />
+                    End="-55.1,28.6446164672766" />
                   <mssgle:CubicBezierSegment
-                    Point1="-45.1666666666667,25.9873896595208"
-                    Point2="-49.1666666666667,25.9873896595208"
-                    Point3="-49.1666666666667,29.9873896595208" />
+                    Point1="-55.1,28.6446164672766"
+                    Point2="-59.1,28.6446164672766"
+                    Point3="-59.1,32.6446164672766" />
                   <mssgle:LineSegment
-                    End="-49.1666666666667,56.5" />
+                    End="-59.1,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-110.501634114583,30.9873896595208,171.8366015625,11.609375"
+              BoundingBox="-115.46830078125,33.6446164672766,171.8366015625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -26768,9 +26773,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26792,9 +26795,7 @@ where [refTable].[suppliers_Id] = ? and [refTable].[contract_Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
